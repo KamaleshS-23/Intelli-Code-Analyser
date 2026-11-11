@@ -302,8 +302,17 @@ class OptimizationService:
         comparison_duration = time.perf_counter() - comparison_started
         ai_settings = get_ai_settings()
         code_generation_provider = ai_settings.code_generation_provider
-        if code_generation_provider == "default":
-            code_generation_provider = ai_settings.provider
+        if code_generation_provider in {"", "default"}:
+            code_generation_provider = (
+                "gemini" if ai_settings.has_gemini else ai_settings.provider
+            )
+        code_generation_fallback_provider = (
+            ai_settings.provider
+            if code_generation_provider == "gemini"
+            and ai_settings.provider in {"groq", "openai", "openai_compatible"}
+            and ai_settings.openai_api_key
+            else None
+        )
         code_generation_model = (
             ai_settings.gemini_model
             if code_generation_provider == "gemini"
@@ -334,6 +343,7 @@ class OptimizationService:
         )
         optimization_meta = {
             "provider": code_generation_provider,
+            "fallback_provider": code_generation_fallback_provider,
             "model": code_generation_model,
             "issues_selected": len(selected_issues),
             "files_processed": len(set(generated_files) | {

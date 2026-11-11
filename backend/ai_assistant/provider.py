@@ -305,6 +305,14 @@ def get_code_generation_provider() -> AIProvider:
     provider = settings.code_generation_provider
 
     if provider in {"", "default"}:
+        if _has_gemini_configured(settings):
+            providers = [GeminiProvider(model=settings.gemini_model)]
+            if (
+                getattr(settings, "openai_api_key", "")
+                and settings.provider in {"groq", "openai", "openai_compatible"}
+            ):
+                providers.append(OpenAICompatibleProvider())
+            return FallbackProvider(providers)
         return get_provider()
     if provider == "gemini":
         if not _has_gemini_configured(settings):
@@ -312,14 +320,15 @@ def get_code_generation_provider() -> AIProvider:
                 "Set GEMINI_API_KEY in the project .env file to enable "
                 "Gemini code generation."
             )
-        gemini_provider = GeminiProvider(model=settings.gemini_model)
-        has_openai = bool(
+        providers = [GeminiProvider(model=settings.gemini_model)]
+        if (
             getattr(settings, "openai_api_key", "")
-            or (getattr(settings, "openai_base_url", "") and getattr(settings, "provider", "") in {"groq", "openai", "openai_compatible"})
-        )
-        if has_openai:
-            return FallbackProvider([gemini_provider, OpenAICompatibleProvider()])
-        return gemini_provider
+            and settings.provider in {"groq", "openai", "openai_compatible"}
+        ):
+            providers.append(OpenAICompatibleProvider())
+        if len(providers) > 1:
+            return FallbackProvider(providers)
+        return providers[0]
     if provider in {"groq", "openai", "openai_compatible"}:
         if provider == settings.provider:
             return get_provider()

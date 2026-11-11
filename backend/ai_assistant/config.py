@@ -1,4 +1,5 @@
 import os
+import re
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -49,14 +50,18 @@ class AISettings:
     gemini_keys: tuple[tuple[str, str], ...] = ()
 
     @property
-    def is_enabled(self) -> bool:
-        provider = (self.provider or "auto").lower()
-        has_gemini = bool(
+    def has_gemini(self) -> bool:
+        return bool(
             self.gemini_api_key
             or self.gemini_api_key_1
             or self.gemini_api_key_2
             or self.gemini_keys
         )
+
+    @property
+    def is_enabled(self) -> bool:
+        provider = (self.provider or "auto").lower()
+        has_gemini = self.has_gemini
         has_openai = bool(self.openai_api_key or self.openai_base_url)
         if provider == "auto":
             return bool(has_gemini or has_openai)
@@ -79,14 +84,33 @@ def get_ai_settings() -> AISettings:
     gemini_api_key_2 = os.getenv("GEMINI_API_KEY_2", "")
     gemini_model_2 = os.getenv("GEMINI_MODEL_2", "gemini-3.1-flash-lite")
 
+    numbered_keys = sorted(
+        (
+            (int(match.group(1)), value)
+            for name, value in os.environ.items()
+            if (match := re.fullmatch(r"GEMINI_API_KEY_(\d+)", name))
+            and value
+        ),
+        key=lambda item: item[0],
+    )
     keys: list[tuple[str, str]] = []
-    if gemini_api_key_1:
-        keys.append((gemini_api_key_1, gemini_model_1))
-    if gemini_api_key_2 and gemini_api_key_2 != gemini_api_key_1:
+    seen_keys: set[str] = set()
+    for index, api_key in numbered_keys:
+        if api_key not in seen_keys:
+            model = os.getenv(f"GEMINI_MODEL_{index}") or (
+                os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
+                if index == 1
+                else "gemini-3.1-flash-lite"
+            )
+            keys.append((api_key, model))
+            seen_keys.add(api_key)
+
+    if gemini_api_key_1 and gemini_api_key_1 not in seen_keys:
+        keys.insert(0, (gemini_api_key_1, gemini_model_1))
+    if gemini_api_key_2 and gemini_api_key_2 not in seen_keys:
         keys.append((gemini_api_key_2, gemini_model_2))
 
-    primary_key = gemini_api_key_1 or gemini_api_key_2
-    primary_model = gemini_model_1 if gemini_api_key_1 else gemini_model_2
+    primary_key, primary_model = keys[0] if keys else ("", gemini_model_1)
 
     return AISettings(
         provider=provider,

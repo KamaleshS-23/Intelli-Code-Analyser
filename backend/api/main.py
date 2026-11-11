@@ -440,20 +440,31 @@ def api_comparison_report(payload: ComparisonReportRequest):
 @app.get("/api/ai/config")
 def ai_config():
     settings = get_ai_settings()
+    code_generation_provider = settings.code_generation_provider
+    if code_generation_provider in {"", "default"} and settings.has_gemini:
+        code_generation_provider = "gemini"
+    fallback_provider = (
+        settings.provider
+        if code_generation_provider == "gemini"
+        and settings.provider in {"groq", "openai", "openai_compatible"}
+        and settings.openai_api_key
+        else None
+    )
     return {
         "provider": settings.provider,
         "model": settings.model,
         "enabled": settings.is_enabled,
         "status": "configured" if settings.is_enabled else "missing-api-key",
-        "code_generation_provider": settings.code_generation_provider,
+        "code_generation_provider": code_generation_provider,
+        "code_generation_fallback_provider": fallback_provider,
         "code_generation_model": (
             settings.gemini_model
-            if settings.code_generation_provider == "gemini"
+            if code_generation_provider == "gemini"
             else settings.model
         ),
         "code_generation_enabled": (
-            bool(settings.gemini_api_key)
-            if settings.code_generation_provider == "gemini"
+            settings.has_gemini
+            if code_generation_provider == "gemini"
             else settings.is_enabled
         ),
     }
