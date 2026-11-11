@@ -1,0 +1,207 @@
+:root {
+  --ink: #202b3c;
+  --muted: #5f6d7d;
+  --brand: #146b5b;
+  --brand-dark: #0c5144;
+  --paper: #ffffff;
+  --canvas: #f0f5f2;
+  --line: #d8e4df;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+.site-header,
+main,
+.site-footer {
+  width: min(100% - 2rem, 960px);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.2rem;
+}
+
+.brand {
+  color: var(--brand-dark);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--brand);
+  text-decoration: underline;
+}
+
+.welcome {
+  padding-block: clamp(3rem, 8vw, 5rem);
+}
+
+.welcome h1 {
+  max-width: 15ch;
+  margin: 0.2rem 0 0.75rem;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.welcome > p:last-child,
+.help-panel p,
+.book-card p {
+  color: var(--muted);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--brand);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.catalog,
+.help-panel {
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-heading h2,
+.help-panel h2 {
+  margin: 0.2rem 0 1.2rem;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.book-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.book-card img {
+  width: 76px;
+  height: 108px;
+  border-radius: 6px;
+  background: #dce5e0;
+  object-fit: cover;
+}
+
+.book-card h3 {
+  margin: 0;
+}
+
+.book-card p {
+  margin: 0.35rem 0 0.8rem;
+}
+
+button {
+  padding: 0.65rem 0.9rem;
+  border: 0;
+  border-radius: 9px;
+  background: var(--brand);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+}
+
+button:hover,
+button:focus-visible {
+  background: var(--brand-dark);
+}
+
+.help-panel {
+  margin-top: 1rem;
+}
+
+.legacy-example {
+  margin-top: 2rem;
+}
+
+.legacy-box p {
+  color: #bd2430 !important;
+  border-color: #bd2430 !important;
+  text-emphasis-color: #123 !important;
+}
+
+.legacy-box p {
+  background: #ffeecc !important;
+}
+
+.legacy-box p {
+  outline-color: #334455 !important;
+}
+
+.legacy-box p {
+  text-decoration-color: #0a0 !important;
+}
+
+.legacy-unused-selector {
+  color: #654321;
+}
+
+.legacy-example main section article div span {
+  font-weight: 600;
+}
+
+.site-footer {
+  padding-block: 2rem;
+  color: var(--muted);
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .book-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

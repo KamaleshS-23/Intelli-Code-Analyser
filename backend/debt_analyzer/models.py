@@ -18,6 +18,18 @@ class DebtIssue:
     suggestion: str = ""
     metric_value: Optional[float] = None
     metric_threshold: Optional[float] = None
+    rule_id: str = ""
+    category: str = ""
+    language: str = ""
+    column: int = 0
+    code_snippet: str = ""
+    refactoring_pattern: str = ""
+    estimated_fix_minutes: int = 0
+    threshold: Optional[float] = None
+    layer: str = ""
+    django_version_aware: bool = False
+    node_version_aware: bool = False
+    framework: Optional[str] = None
 
 
 @dataclass

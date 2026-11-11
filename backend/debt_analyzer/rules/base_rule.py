@@ -13,6 +13,7 @@ class AnalysisContext:
     project: object                     # ProjectModel
     coupling_metrics: Dict[str, dict] = field(default_factory=dict)
     inheritance_depth: Dict[str, int] = field(default_factory=dict)
+    python_ast_cache: dict = field(default_factory=dict)
 
 
 class BaseRule:

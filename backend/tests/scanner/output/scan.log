@@ -1,0 +1,10 @@
+2026-10-06 00:37:30.599 | INFO     | scanner.project_scanner:scan:35 - Scanning project: K:\PROJECTS\MINI PROJECT\original_mini_project(technical_debt)\original mini project\AI-Technical-Debt-Agent\backend\scanner\uploads\SampleNodeProject using stack=nodejs
+2026-10-06 00:37:30.604 | INFO     | scanner.project_scanner:scan:66 - Classes parsed: 0
+2026-10-06 00:37:30.604 | INFO     | scanner.dependency_parser:build_dependency_edges:71 - Resolved 0 internal dependency edges
+2026-10-06 00:37:30.626 | INFO     | scanner.project_scanner:scan:99 - Scan complete in 0.028s
+2026-10-06 00:37:30.631 | INFO     | debt_analyzer.debt_engine:analyze:166 - UnresolvedTodo: 0 issue(s) found
+2026-10-06 00:37:30.636 | INFO     | debt_analyzer.debt_engine:analyze:166 - HardcodedCredentials: 0 issue(s) found
+2026-10-06 00:37:30.680 | INFO     | debt_analyzer.debt_engine:analyze:166 - WebStackAnalysis: 4 issue(s) found
+2026-10-06 00:37:30.685 | INFO     | debt_analyzer.debt_engine:analyze:166 - NodeSynchronousIo: 1 issue(s) found
+2026-10-06 00:37:30.727 | INFO     | debt_analyzer.debt_engine:analyze:166 - NodeFrameworkAnalysis: 29 issue(s) found
+2026-10-06 00:37:30.727 | INFO     | debt_analyzer.debt_engine:analyze:179 - Debt analysis complete: 34 total issues, score=144

@@ -1,0 +1,45 @@
+{
+  "project_name": "tmp9x0q8yce",
+  "project_path": "K:\\PROJECTS\\MINI PROJECT\\new mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmp9x0q8yce",
+  "classes": [],
+  "dependencies": [],
+  "errors": [],
+  "statistics": {
+    "total_files": 0,
+    "parsed_files": 0,
+    "failed_files": 0,
+    "total_classes": 0,
+    "total_interfaces": 0,
+    "total_enums": 0,
+    "total_methods": 0,
+    "total_fields": 0,
+    "dependency_edges": 0,
+    "circular_dependencies": 0,
+    "scan_time_seconds": 0.428,
+    "graph": {
+      "node_count": 0,
+      "edge_count": 0,
+      "coupling_metrics": {},
+      "circular_dependencies": []
+    }
+  },
+  "debt_report": {
+    "project_name": "tmp9x0q8yce",
+    "issues": [],
+    "total_score": 0,
+    "severity_counts": {},
+    "rule_counts": {},
+    "top_offenders": []
+  },
+  "dependency_report": {
+    "build_tool": "unknown",
+    "project_path": "K:\\PROJECTS\\MINI PROJECT\\new mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmp9x0q8yce",
+    "dependencies": [],
+    "plugins": [],
+    "detected_frameworks": [],
+    "outdated_dependencies": [],
+    "warnings": [
+      "No pom.xml or build.gradle(.kts) found in project."
+    ]
+  }
+}

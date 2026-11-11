@@ -1,0 +1,644 @@
+{
+  "project_name": "SampleDjangoProject",
+  "project_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\SampleDjangoProject",
+  "classes": [
+    {
+      "name": "LibraryConfig",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\SampleDjangoProject\\app\\apps.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [
+        {
+          "name": "default_auto_field",
+          "datatype": "unknown",
+          "modifiers": [],
+          "line_number": 5
+        },
+        {
+          "name": "name",
+          "datatype": "unknown",
+          "modifiers": [],
+          "line_number": 6
+        }
+      ],
+      "methods": [],
+      "extends": "AppConfig",
+      "implements": [],
+      "annotations": [],
+      "line_count": 6,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "BookForm",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\SampleDjangoProject\\app\\forms.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [],
+      "extends": "forms.ModelForm",
+      "implements": [],
+      "annotations": [],
+      "line_count": 8,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "Author",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\SampleDjangoProject\\app\\models.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [
+        {
+          "name": "name",
+          "datatype": "unknown",
+          "modifiers": [],
+          "line_number": 5
+        },
+        {
+          "name": "is_active",
+          "datatype": "unknown",
+          "modifiers": [],
+          "line_number": 6
+        }
+      ],
+      "methods": [
+        {
+          "name": "books",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 8,
+          "line_count": 2,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "models.Model",
+      "implements": [],
+      "annotations": [],
+      "line_count": 15,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "Book",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\SampleDjangoProject\\app\\models.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [
+        {
+          "name": "title",
+          "datatype": "unknown",
+          "modifiers": [],
+          "line_number": 13
+        },
+        {
+          "name": "author",
+          "datatype": "unknown",
+          "modifiers": [],
+          "line_number": 14
+        },
+        {
+          "name": "summary",
+          "datatype": "unknown",
+          "modifiers": [],
+          "line_number": 15
+        }
+      ],
+      "methods": [],
+      "extends": "models.Model",
+      "implements": [],
+      "annotations": [],
+      "line_count": 15,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "Migration",
+      "package": "app.migrations",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\SampleDjangoProject\\app\\migrations\\0002_book_metadata.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [
+        {
+          "name": "atomic",
+          "datatype": "unknown",
+          "modifiers": [],
+          "line_number": 10
+        },
+        {
+          "name": "operations",
+          "datatype": "unknown",
+          "modifiers": [],
+          "line_number": 11
+        }
+      ],
+      "methods": [],
+      "extends": "migrations.Migration",
+      "implements": [],
+      "annotations": [],
+      "line_count": 18,
+      "mutable_static_fields": []
+    }
+  ],
+  "dependencies": [],
+  "errors": [],
+  "statistics": {
+    "stack": "python",
+    "language": "python",
+    "languages": [
+      "python"
+    ],
+    "total_files": 8,
+    "parsed_files": 8,
+    "failed_files": 0,
+    "total_classes": 5,
+    "total_interfaces": 0,
+    "total_enums": 0,
+    "total_methods": 1,
+    "total_fields": 9,
+    "dependency_edges": 0,
+    "circular_dependencies": 0,
+    "scan_time_seconds": 0.097,
+    "graph": {
+      "node_count": 5,
+      "edge_count": 0,
+      "coupling_metrics": {
+        "app.LibraryConfig": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "app.BookForm": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "app.Author": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "app.Book": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "app.migrations.Migration": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        }
+      },
+      "circular_dependencies": []
+    }
+  },
+  "debt_report": {
+    "project_name": "SampleDjangoProject",
+    "issues": [
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "LibraryConfig",
+        "file_path": "app\\apps.py",
+        "method_name": null,
+        "line_number": 4,
+        "message": "Public class 'LibraryConfig' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "BookForm",
+        "file_path": "app\\forms.py",
+        "method_name": null,
+        "line_number": 5,
+        "message": "Public class 'BookForm' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "BookForm",
+        "file_path": "app\\forms.py",
+        "method_name": null,
+        "line_number": 6,
+        "message": "Public class 'Meta' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "Author",
+        "file_path": "app\\models.py",
+        "method_name": null,
+        "line_number": 4,
+        "message": "Public class 'Author' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "Book",
+        "file_path": "app\\models.py",
+        "method_name": null,
+        "line_number": 12,
+        "message": "Public class 'Book' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "Author",
+        "file_path": "app\\models.py",
+        "method_name": "books",
+        "line_number": 8,
+        "message": "Public function 'books' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "app\\tests.py",
+        "file_path": "app\\tests.py",
+        "method_name": "test_dashboard",
+        "line_number": 1,
+        "message": "Public function 'test_dashboard' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "app\\views.py",
+        "file_path": "app\\views.py",
+        "method_name": "find_records",
+        "line_number": 5,
+        "message": "Public function 'find_records' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "app\\views.py",
+        "file_path": "app\\views.py",
+        "method_name": "dashboard",
+        "line_number": 10,
+        "message": "Public function 'dashboard' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "app\\views.py",
+        "file_path": "app\\views.py",
+        "method_name": "profile",
+        "line_number": 31,
+        "message": "Public function 'profile' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "app\\migrations\\0002_book_metadata.py",
+        "file_path": "app\\migrations\\0002_book_metadata.py",
+        "method_name": "populate_metadata",
+        "line_number": 4,
+        "message": "Public function 'populate_metadata' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "Migration",
+        "file_path": "app\\migrations\\0002_book_metadata.py",
+        "method_name": null,
+        "line_number": 9,
+        "message": "Public class 'Migration' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MutableClassAttribute",
+        "severity": "medium",
+        "class_name": "Migration",
+        "file_path": "app\\migrations\\0002_book_metadata.py",
+        "method_name": null,
+        "line_number": 11,
+        "message": "Class 'Migration' has mutable class-level state.",
+        "suggestion": "Initialize mutable state per instance or make shared state intentional and immutable.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "HardcodedCredentials",
+        "severity": "critical",
+        "class_name": "config\\settings.py",
+        "file_path": "config\\settings.py",
+        "method_name": null,
+        "line_number": 2,
+        "message": "Credential-like value is hardcoded in 'SECRET_KEY'.",
+        "suggestion": "Load the value from environment-specific configuration or a secret manager.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      }
+    ],
+    "total_score": 25,
+    "severity_counts": {
+      "low": 12,
+      "medium": 1,
+      "critical": 1
+    },
+    "rule_counts": {
+      "MissingDocstring": 12,
+      "MutableClassAttribute": 1,
+      "HardcodedCredentials": 1
+    },
+    "top_offenders": [
+      {
+        "class_name": "config\\settings.py",
+        "score": 10,
+        "issue_count": 1
+      },
+      {
+        "class_name": "Migration",
+        "score": 4,
+        "issue_count": 2
+      },
+      {
+        "class_name": "app\\views.py",
+        "score": 3,
+        "issue_count": 3
+      },
+      {
+        "class_name": "BookForm",
+        "score": 2,
+        "issue_count": 2
+      },
+      {
+        "class_name": "Author",
+        "score": 2,
+        "issue_count": 2
+      },
+      {
+        "class_name": "LibraryConfig",
+        "score": 1,
+        "issue_count": 1
+      },
+      {
+        "class_name": "Book",
+        "score": 1,
+        "issue_count": 1
+      },
+      {
+        "class_name": "app\\tests.py",
+        "score": 1,
+        "issue_count": 1
+      },
+      {
+        "class_name": "app\\migrations\\0002_book_metadata.py",
+        "score": 1,
+        "issue_count": 1
+      }
+    ]
+  },
+  "dependency_report": {
+    "build_tool": "unknown",
+    "project_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\SampleDjangoProject",
+    "dependencies": [],
+    "plugins": [],
+    "detected_frameworks": [],
+    "outdated_dependencies": [],
+    "warnings": [
+      "No pom.xml or build.gradle(.kts) found in project."
+    ]
+  }
+}

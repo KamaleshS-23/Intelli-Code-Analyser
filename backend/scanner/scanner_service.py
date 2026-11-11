@@ -28,14 +28,16 @@ class ScannerService:
         save_output=True,
         run_debt_analysis=True,
         run_dependency_scan=True,
+        stack="java",
     ):
-        self.scanner = ProjectScanner(project_path)
+        self.scanner = ProjectScanner(project_path, stack=stack)
         project = self.scanner.scan()
 
-        result = project.to_dict()
-
         if run_debt_analysis:
-            debt_report = DebtEngine().analyze(project)
+            debt_report = DebtEngine(stack=stack).analyze(project)
+
+        result = project.to_dict()
+        if run_debt_analysis:
             result["debt_report"] = debt_report.to_dict()
 
         if run_dependency_scan:

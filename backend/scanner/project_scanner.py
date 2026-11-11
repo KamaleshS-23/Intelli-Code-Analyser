@@ -3,46 +3,57 @@ Project Scanner
 ----------------
 The orchestrator for Phase 1. Given a project directory, it:
 
-  1. Discovers every .java file (utils/file_utils.py)
-  2. Parses each one into ClassModel objects (java_parser/java_ast_parser.py)
-  3. Resolves internal class-to-class dependencies (dependency_parser.py)
-  4. Builds a dependency graph + coupling metrics (graph_builder.py)
+  1. Discovers every source file for the selected stack
+  2. Parses each one into ClassModel objects
+  3. Resolves internal class-to-class dependencies
+  4. Builds a dependency graph + coupling metrics
   5. Packages everything into a single ProjectModel
-
-This replaces the earlier skeleton version, which only counted files.
 """
 
 import time
 from pathlib import Path
 
-from scanner.utils.file_utils import get_java_files
+from scanner.utils.file_utils import get_source_files
 from scanner.utils.logger import logger
 from scanner.java_parser.java_ast_parser import parse_java_file
+from scanner.python_parser.python_ast_parser import parse_python_file
 from scanner.dependency_parser import build_dependency_edges
 from scanner.graph_builder import build_and_analyze
 from scanner.models.project_model import ProjectModel, FileParseError
+from stacks import STACK_PROFILES, normalize_stack
 
 
 class ProjectScanner:
-    def __init__(self, project_path):
+    def __init__(self, project_path, stack="java"):
         self.project_path = Path(project_path)
+        self.stack = normalize_stack(stack)
 
     def scan(self):
         start_time = time.time()
         project_name = self.project_path.name
 
-        logger.info(f"Scanning project: {self.project_path}")
+        logger.info(f"Scanning project: {self.project_path} using stack={self.stack}")
 
-        java_files = get_java_files(self.project_path)
-        logger.info(f"Java files found: {len(java_files)}")
+        source_files = get_source_files(self.project_path, self.stack)
+        parser_by_extension = {
+            ".java": parse_java_file,
+            ".py": parse_python_file,
+        }
 
         project = ProjectModel(
             project_name=project_name,
             project_path=str(self.project_path),
         )
 
-        for file_path in java_files:
-            classes, error = parse_java_file(file_path)
+        for file_path in source_files:
+            parser = parser_by_extension.get(file_path.suffix.lower())
+            if parser is None:
+                continue
+            classes, error = (
+                parser(file_path, str(self.project_path))
+                if file_path.suffix.lower() == ".py"
+                else parser(file_path)
+            )
 
             if error:
                 project.errors.append(
@@ -54,8 +65,6 @@ class ProjectScanner:
 
         logger.info(f"Classes parsed: {len(project.classes)}")
 
-        # Dependency resolution + graph metrics only make sense once we know
-        # about every class in the project, so this runs after the full loop.
         edges = build_dependency_edges(project.classes)
         project.dependencies = edges
 
@@ -64,8 +73,11 @@ class ProjectScanner:
         elapsed = round(time.time() - start_time, 3)
 
         project.statistics = {
-            "total_files": len(java_files),
-            "parsed_files": len(java_files) - len(project.errors),
+            "stack": self.stack,
+            "language": ", ".join(STACK_PROFILES[self.stack]["languages"]),
+            "languages": STACK_PROFILES[self.stack]["languages"],
+            "total_files": len(source_files),
+            "parsed_files": len(source_files) - len(project.errors),
             "failed_files": len(project.errors),
             "total_classes": len(
                 [c for c in project.classes if c.class_type == "class"]

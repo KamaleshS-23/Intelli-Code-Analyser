@@ -1,0 +1,3875 @@
+{
+  "project_name": "sample project 2",
+  "project_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2",
+  "classes": [
+    {
+      "name": "AuditLogService",
+      "package": "demo",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\AuditLogService.java",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [
+        "java.util.ArrayList",
+        "java.util.List"
+      ],
+      "fields": [
+        {
+          "name": "logs",
+          "datatype": "List<String>",
+          "modifiers": [
+            "final",
+            "private"
+          ],
+          "line_number": 7
+        }
+      ],
+      "methods": [
+        {
+          "name": "recordLogin",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "userName",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 9,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "3a25ff48a399a8f05a63578e91724162",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "add",
+            "currentTimeMillis"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "recordPayment",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "customerId",
+              "datatype": "String"
+            },
+            {
+              "name": "amount",
+              "datatype": "double"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 13,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "5e31aa58c871e53b49c0ce208d1d2470",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "add"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "recordInvoice",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "invoiceId",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 17,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "7f68ec39d99c839eb2d47c23fff19d1c",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "add"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getLogs",
+          "return_type": "List<String>",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 21,
+          "line_count": 5,
+          "is_constructor": false,
+          "non_blank_lines": 3,
+          "body_hash": "63d1e1444aff998e201746220d2145a0",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 25,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "CustomerProfile",
+      "package": "demo",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\CustomerProfile.java",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [
+        {
+          "name": "customerId",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 4
+        },
+        {
+          "name": "firstName",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 5
+        },
+        {
+          "name": "lastName",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 6
+        },
+        {
+          "name": "email",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 7
+        },
+        {
+          "name": "phone",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 8
+        },
+        {
+          "name": "preferredCurrency",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 9
+        },
+        {
+          "name": "vip",
+          "datatype": "boolean",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 10
+        }
+      ],
+      "methods": [
+        {
+          "name": "CustomerProfile",
+          "return_type": "",
+          "parameters": [
+            {
+              "name": "customerId",
+              "datatype": "String"
+            },
+            {
+              "name": "firstName",
+              "datatype": "String"
+            },
+            {
+              "name": "lastName",
+              "datatype": "String"
+            },
+            {
+              "name": "email",
+              "datatype": "String"
+            },
+            {
+              "name": "phone",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 12,
+          "line_count": 8,
+          "is_constructor": true,
+          "non_blank_lines": 6,
+          "body_hash": "4bc9c8f2a6b1956dfd38a7d84a407ee5",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getCustomerId",
+          "return_type": "String",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 20,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "884bf3fe9722250e315f4a6cf4da09a8",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getFirstName",
+          "return_type": "String",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 24,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "0891b29af09cceb8e68c699aa9a53aca",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getLastName",
+          "return_type": "String",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 28,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "68fad6f0275fb4649fb815ad208be70f",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getEmail",
+          "return_type": "String",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 32,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "d54e210218ae8f27362d435fe856c537",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getPhone",
+          "return_type": "String",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 36,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "64a4c075c5fc4046b6320b5bffd7d171",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getPreferredCurrency",
+          "return_type": "String",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 40,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "3c34041748a4bfa46bceff20f8283d1b",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "setPreferredCurrency",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "preferredCurrency",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 44,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "1bab1b996219dae6ddb261bd9a9139c8",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "isVip",
+          "return_type": "boolean",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 48,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "7d3316c9de86200b137489e4ee8a2d5e",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "setVip",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "vip",
+              "datatype": "boolean"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 52,
+          "line_count": 5,
+          "is_constructor": false,
+          "non_blank_lines": 3,
+          "body_hash": "fc9efb5dce57104eb26cc43e34a52f0c",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 56,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "InvoiceGenerator",
+      "package": "demo",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\InvoiceGenerator.java",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [
+        "java.util.ArrayList",
+        "java.util.List"
+      ],
+      "fields": [
+        {
+          "name": "invoices",
+          "datatype": "List<String>",
+          "modifiers": [
+            "final",
+            "private"
+          ],
+          "line_number": 7
+        }
+      ],
+      "methods": [
+        {
+          "name": "createInvoice",
+          "return_type": "String",
+          "parameters": [
+            {
+              "name": "customerId",
+              "datatype": "String"
+            },
+            {
+              "name": "subtotal",
+              "datatype": "double"
+            },
+            {
+              "name": "hasTax",
+              "datatype": "boolean"
+            },
+            {
+              "name": "hasShipping",
+              "datatype": "boolean"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 9,
+          "line_count": 13,
+          "is_constructor": false,
+          "non_blank_lines": 11,
+          "body_hash": "329d797964be4cd28466ab61a2ce6648",
+          "cyclomatic_complexity": 5,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 0.15,
+              "line": 12
+            },
+            {
+              "value": 25.0,
+              "line": 15
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "currentTimeMillis",
+            "add"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "calculateTotal",
+          "return_type": "double",
+          "parameters": [
+            {
+              "name": "customerId",
+              "datatype": "String"
+            },
+            {
+              "name": "subtotal",
+              "datatype": "double"
+            },
+            {
+              "name": "hasTax",
+              "datatype": "boolean"
+            },
+            {
+              "name": "hasShipping",
+              "datatype": "boolean"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 22,
+          "line_count": 11,
+          "is_constructor": false,
+          "non_blank_lines": 9,
+          "body_hash": "b3d80a83b60db2740eecc29930625f99",
+          "cyclomatic_complexity": 5,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 0.18,
+              "line": 25
+            },
+            {
+              "value": 30.0,
+              "line": 28
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getInvoices",
+          "return_type": "List<String>",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 33,
+          "line_count": 5,
+          "is_constructor": false,
+          "non_blank_lines": 3,
+          "body_hash": "c507bd0bd2dbc4ee2e9d32204dec4786",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 37,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "MainApplication",
+      "package": "demo",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\MainApplication.java",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "main",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "args",
+              "datatype": "String[]"
+            }
+          ],
+          "modifiers": [
+            "public",
+            "static"
+          ],
+          "annotations": [],
+          "line_number": 4,
+          "line_count": 21,
+          "is_constructor": false,
+          "non_blank_lines": 16,
+          "body_hash": "75b470ffaf179eae2a986bdbc49ad732",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 1850.0,
+              "line": 13
+            },
+            {
+              "value": 600,
+              "line": 17
+            },
+            {
+              "value": 1250.5,
+              "line": 18
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "login",
+            "setOrderId",
+            "setCustomerId",
+            "setTotalAmount",
+            "setExpedited",
+            "finalizeOrder",
+            "processCharge",
+            "createInvoice",
+            "println",
+            "println"
+          ],
+          "external_type_accesses": {
+            "userService": 1,
+            "orderManagementService": 5,
+            "paymentGateway": 1,
+            "invoiceGenerator": 1
+          },
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 24,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "OrderManagementService",
+      "package": "demo",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\OrderManagementService.java",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [
+        {
+          "name": "field1",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 4
+        },
+        {
+          "name": "field2",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 5
+        },
+        {
+          "name": "field3",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 6
+        },
+        {
+          "name": "field4",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 7
+        },
+        {
+          "name": "field5",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 8
+        },
+        {
+          "name": "field6",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 9
+        },
+        {
+          "name": "field7",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 10
+        },
+        {
+          "name": "field8",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 11
+        },
+        {
+          "name": "field9",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 12
+        },
+        {
+          "name": "field10",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 13
+        },
+        {
+          "name": "field11",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 14
+        },
+        {
+          "name": "field12",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 15
+        },
+        {
+          "name": "field13",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 16
+        },
+        {
+          "name": "field14",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 17
+        },
+        {
+          "name": "field15",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 18
+        },
+        {
+          "name": "field16",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 19
+        },
+        {
+          "name": "field17",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 20
+        },
+        {
+          "name": "field18",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 21
+        },
+        {
+          "name": "field19",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 22
+        },
+        {
+          "name": "field20",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 23
+        },
+        {
+          "name": "orderId",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 24
+        },
+        {
+          "name": "customerId",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 25
+        },
+        {
+          "name": "totalAmount",
+          "datatype": "double",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 26
+        },
+        {
+          "name": "expedited",
+          "datatype": "boolean",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 27
+        },
+        {
+          "name": "giftWrap",
+          "datatype": "boolean",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 28
+        },
+        {
+          "name": "priority",
+          "datatype": "boolean",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 29
+        }
+      ],
+      "methods": [
+        {
+          "name": "validateOrder",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 31,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "0e1f134073181583a096761aced13cc5",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "reserveInventory",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 35,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "6b4a7b69bad804144cc5fe98d52bf128",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "calculateTax",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 39,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "3bae33750a49e7c0e70a90751d8d3a19",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "applyDiscount",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 43,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "d076fa9d7445275a0e895c2c1255390a",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "chargePayment",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 47,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "7874547f5a5a2ef5a2c620d4cdb6d8ff",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "createShipment",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 51,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "355c93d167d918cdd00dd612479a08d2",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "notifyCustomer",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 55,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "2cafe683b99eaad0b3ca685d56fc868e",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "updateAnalytics",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 59,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "9a963a8cc8f766e5c3cded6e1e95924b",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "writeAuditLog",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 63,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "488bddd386895dcc92764b1f888de613",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep1",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 67,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep2",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 68,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep3",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 69,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep4",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 70,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep5",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 71,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep6",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 72,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep7",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 73,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep8",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 74,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep9",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 75,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep10",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 76,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep11",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 77,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep12",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 78,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep13",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 79,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep14",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 80,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep15",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 81,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep16",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 82,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep17",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 83,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep18",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 84,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep19",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 85,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "processStep20",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 86,
+          "line_count": 2,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "finalizeOrder",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 88,
+          "line_count": 13,
+          "is_constructor": false,
+          "non_blank_lines": 11,
+          "body_hash": "b48f0087a1f0bca4e07458d67d22ba04",
+          "cyclomatic_complexity": 7,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println",
+            "println",
+            "println",
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "setOrderId",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "orderId",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 101,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "setCustomerId",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "customerId",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 102,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "setTotalAmount",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "totalAmount",
+              "datatype": "double"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 103,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "setExpedited",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "expedited",
+              "datatype": "boolean"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 104,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "setGiftWrap",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "giftWrap",
+              "datatype": "boolean"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 105,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "setPriority",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "priority",
+              "datatype": "boolean"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 106,
+          "line_count": 3,
+          "is_constructor": false,
+          "non_blank_lines": 1,
+          "body_hash": "cbb184dd8e05c9709e5dcaedaa0495cf",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 108,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "PaymentGateway",
+      "package": "demo",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\PaymentGateway.java",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [
+        {
+          "name": "merchantKey",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 4
+        },
+        {
+          "name": "apiToken",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 5
+        }
+      ],
+      "methods": [
+        {
+          "name": "processCharge",
+          "return_type": "boolean",
+          "parameters": [
+            {
+              "name": "cardNumber",
+              "datatype": "String"
+            },
+            {
+              "name": "amount",
+              "datatype": "int"
+            },
+            {
+              "name": "currency",
+              "datatype": "String"
+            },
+            {
+              "name": "express",
+              "datatype": "boolean"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 7,
+          "line_count": 21,
+          "is_constructor": false,
+          "non_blank_lines": 19,
+          "body_hash": "011fb342d86d10e5eb90551eb5906efb",
+          "cyclomatic_complexity": 14,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 12,
+              "line": 8
+            },
+            {
+              "value": 9999,
+              "line": 21
+            },
+            {
+              "value": 3,
+              "line": 25
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "length",
+            "equals",
+            "println",
+            "isEmpty",
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {
+            "String": 3
+          },
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getMerchantKey",
+          "return_type": "String",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 28,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "b16d7d5a02116c551cb72393b0476c6b",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getApiToken",
+          "return_type": "String",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 32,
+          "line_count": 5,
+          "is_constructor": false,
+          "non_blank_lines": 3,
+          "body_hash": "9df616225f82f16908161e04f63ef2be",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 36,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "ReportExporter",
+      "package": "demo",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\ReportExporter.java",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [
+        "java.io.File",
+        "java.io.FileWriter",
+        "java.io.IOException",
+        "java.util.ArrayList",
+        "java.util.List"
+      ],
+      "fields": [
+        {
+          "name": "rows",
+          "datatype": "List<String>",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 10
+        }
+      ],
+      "methods": [
+        {
+          "name": "exportCsv",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "fileName",
+              "datatype": "String"
+            },
+            {
+              "name": "values",
+              "datatype": "String[]"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 12,
+          "line_count": 13,
+          "is_constructor": false,
+          "non_blank_lines": 11,
+          "body_hash": "190c152564a05707b11a4cd1678ee312",
+          "cyclomatic_complexity": 3,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 17,
+          "unclosed_resource_lines": [
+            15
+          ],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "write",
+            "close",
+            "printStackTrace"
+          ],
+          "external_type_accesses": {
+            "writer": 2
+          },
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "addRow",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "row",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 25,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "65da83a317850683dee95620af853b22",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "add"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getRows",
+          "return_type": "List<String>",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 29,
+          "line_count": 5,
+          "is_constructor": false,
+          "non_blank_lines": 3,
+          "body_hash": "361e5e4917872b14cbcc2fa9ceea7f17",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 33,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "UserService",
+      "package": "demo",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [
+        "java.io.IOException",
+        "java.util.ArrayList",
+        "java.util.List"
+      ],
+      "fields": [
+        {
+          "name": "currentUser",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 8
+        },
+        {
+          "name": "currentPassword",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 9
+        },
+        {
+          "name": "currentToken",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 10
+        },
+        {
+          "name": "loginHistory",
+          "datatype": "List<String>",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 11
+        },
+        {
+          "name": "auditLogService",
+          "datatype": "AuditLogService",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 12
+        },
+        {
+          "name": "unusedCacheKey",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 13
+        }
+      ],
+      "methods": [
+        {
+          "name": "login",
+          "return_type": "String",
+          "parameters": [
+            {
+              "name": "username",
+              "datatype": "String"
+            },
+            {
+              "name": "password",
+              "datatype": "String"
+            },
+            {
+              "name": "ipAddress",
+              "datatype": "String"
+            },
+            {
+              "name": "rememberMe",
+              "datatype": "boolean"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 15,
+          "line_count": 34,
+          "is_constructor": false,
+          "non_blank_lines": 28,
+          "body_hash": "a23ce35ed46089ae4bc0964aa37714db",
+          "cyclomatic_complexity": 13,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 8,
+              "line": 21
+            }
+          ],
+          "unused_local_vars": [
+            {
+              "name": "tempToken",
+              "line": 16
+            }
+          ],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "isEmpty",
+            "println",
+            "length",
+            "println",
+            "equals",
+            "println",
+            "currentTimeMillis",
+            "recordLogin",
+            "add",
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {
+            "String": 2
+          },
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "connectDatabase",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 49,
+          "line_count": 5,
+          "is_constructor": false,
+          "non_blank_lines": 3,
+          "body_hash": "41cd0d9165bdc73eaf0d654c49c42bda",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "println",
+            "length"
+          ],
+          "external_type_accesses": {
+            "dbPassword": 1
+          },
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": [
+            {
+              "line": 50,
+              "name": "dbPassword"
+            },
+            {
+              "line": 50,
+              "name": "dbPassword"
+            }
+          ]
+        },
+        {
+          "name": "processPayment",
+          "return_type": "boolean",
+          "parameters": [
+            {
+              "name": "card",
+              "datatype": "String"
+            },
+            {
+              "name": "amount",
+              "datatype": "int"
+            },
+            {
+              "name": "express",
+              "datatype": "boolean"
+            },
+            {
+              "name": "refundable",
+              "datatype": "boolean"
+            },
+            {
+              "name": "international",
+              "datatype": "boolean"
+            },
+            {
+              "name": "currency",
+              "datatype": "String"
+            },
+            {
+              "name": "merchant",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 54,
+          "line_count": 27,
+          "is_constructor": false,
+          "non_blank_lines": 25,
+          "body_hash": "6e1f2fbf29428e5a37a3f09ceeb37725",
+          "cyclomatic_complexity": 23,
+          "max_nesting_depth": 3,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 50,
+              "line": 69
+            },
+            {
+              "value": 5000,
+              "line": 69
+            },
+            {
+              "value": 12,
+              "line": 70
+            },
+            {
+              "value": 20,
+              "line": 70
+            },
+            {
+              "value": 9999,
+              "line": 75
+            },
+            {
+              "value": 7,
+              "line": 78
+            },
+            {
+              "value": 3,
+              "line": 78
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "equals",
+            "equals",
+            "equals",
+            "length",
+            "length",
+            "length"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {
+            "String": 6
+          },
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "createUserProfile",
+          "return_type": "String",
+          "parameters": [
+            {
+              "name": "first",
+              "datatype": "String"
+            },
+            {
+              "name": "last",
+              "datatype": "String"
+            },
+            {
+              "name": "email",
+              "datatype": "String"
+            },
+            {
+              "name": "phone",
+              "datatype": "String"
+            },
+            {
+              "name": "city",
+              "datatype": "String"
+            },
+            {
+              "name": "country",
+              "datatype": "String"
+            },
+            {
+              "name": "role",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 81,
+          "line_count": 5,
+          "is_constructor": false,
+          "non_blank_lines": 3,
+          "body_hash": "f070379f01940770f7905934027747e9",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "verifyUserSession",
+          "return_type": "boolean",
+          "parameters": [
+            {
+              "name": "token",
+              "datatype": "String"
+            },
+            {
+              "name": "user",
+              "datatype": "String"
+            },
+            {
+              "name": "admin",
+              "datatype": "boolean"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 86,
+          "line_count": 15,
+          "is_constructor": false,
+          "non_blank_lines": 13,
+          "body_hash": "66960a17255e851080e51b205046f68c",
+          "cyclomatic_complexity": 8,
+          "max_nesting_depth": 5,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 5,
+              "line": 88
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "length",
+            "length",
+            "equals"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {
+            "String": 3
+          },
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "loadConfig",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 101,
+          "line_count": 9,
+          "is_constructor": false,
+          "non_blank_lines": 7,
+          "body_hash": "c34b085d8c91c2da396d0d3eb31bbb2f",
+          "cyclomatic_complexity": 3,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [
+            101
+          ],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "calculateTimeout",
+          "return_type": "int",
+          "parameters": [
+            {
+              "name": "days",
+              "datatype": "int"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 110,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "b7ecf22e1af0c14dfe0e2f51fa8b0637",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 86400,
+              "line": 111
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "oldValidateToken",
+          "return_type": "boolean",
+          "parameters": [
+            {
+              "name": "token",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 114,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "c67a318575924f37380318247eca70e6",
+          "cyclomatic_complexity": 2,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "contains"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {
+            "String": 1
+          },
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "registerUser",
+          "return_type": "boolean",
+          "parameters": [
+            {
+              "name": "username",
+              "datatype": "String"
+            },
+            {
+              "name": "password",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 118,
+          "line_count": 13,
+          "is_constructor": false,
+          "non_blank_lines": 11,
+          "body_hash": "c05ac7592c5c88e0fd956ef5ac3119e0",
+          "cyclomatic_complexity": 7,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 8,
+              "line": 122
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "isEmpty",
+            "length",
+            "println"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {
+            "String": 2
+          },
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getCurrentUser",
+          "return_type": "String",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 131,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "d3f8aa83cf86d2d05d52f8287f6063ac",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getCurrentToken",
+          "return_type": "String",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 135,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "0635c064fce3b9ad3393ec93050a0798",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "getLoginHistory",
+          "return_type": "List<String>",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 139,
+          "line_count": 5,
+          "is_constructor": false,
+          "non_blank_lines": 3,
+          "body_hash": "f2097e5b463237382f603fb6d6a4e458",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 143,
+      "mutable_static_fields": []
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "demo.UserService",
+      "to": "demo.AuditLogService",
+      "type": "field"
+    }
+  ],
+  "errors": [],
+  "statistics": {
+    "total_files": 8,
+    "parsed_files": 8,
+    "failed_files": 0,
+    "total_classes": 8,
+    "total_interfaces": 0,
+    "total_enums": 0,
+    "total_methods": 72,
+    "total_fields": 44,
+    "dependency_edges": 1,
+    "circular_dependencies": 0,
+    "scan_time_seconds": 0.25,
+    "graph": {
+      "node_count": 8,
+      "edge_count": 1,
+      "coupling_metrics": {
+        "demo.AuditLogService": {
+          "afferent_coupling": 1,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "demo.CustomerProfile": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "demo.InvoiceGenerator": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "demo.MainApplication": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "demo.OrderManagementService": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "demo.PaymentGateway": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "demo.ReportExporter": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "demo.UserService": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 1,
+          "instability": 1.0
+        }
+      },
+      "circular_dependencies": []
+    }
+  },
+  "debt_report": {
+    "project_name": "sample project 2",
+    "issues": [
+      {
+        "rule": "LongMethod",
+        "severity": "high",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "login",
+        "line_number": 15,
+        "message": "Method 'login' is 34 lines long (threshold: 30).",
+        "suggestion": "Consider extracting cohesive blocks of this method into smaller, well-named private methods (Extract Method).",
+        "metric_value": 34,
+        "metric_threshold": 30
+      },
+      {
+        "rule": "ExcessiveParameterList",
+        "severity": "medium",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "processPayment",
+        "line_number": 54,
+        "message": "Method 'processPayment' takes 7 parameters (card, amount, express, refundable, international, currency, merchant); threshold is 5.",
+        "suggestion": "Introduce a Data Transfer Object (DTO) or Parameter Object to encapsulate these arguments.",
+        "metric_value": 7,
+        "metric_threshold": 5
+      },
+      {
+        "rule": "ExcessiveParameterList",
+        "severity": "medium",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "createUserProfile",
+        "line_number": 81,
+        "message": "Method 'createUserProfile' takes 7 parameters (first, last, email, phone, city, country, role); threshold is 5.",
+        "suggestion": "Introduce a Data Transfer Object (DTO) or Parameter Object to encapsulate these arguments.",
+        "metric_value": 7,
+        "metric_threshold": 5
+      },
+      {
+        "rule": "GodClass",
+        "severity": "critical",
+        "class_name": "demo.OrderManagementService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\OrderManagementService.java",
+        "method_name": null,
+        "line_number": 0,
+        "message": "Class 'OrderManagementService' has 36 methods and 26 fields, suggesting it has taken on too many responsibilities.",
+        "suggestion": "Split this class by responsibility - group related methods and the fields they use into their own classes (Extract Class).",
+        "metric_value": 62,
+        "metric_threshold": 35
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "login",
+        "line_number": 16,
+        "message": "Variable 'tempToken' is assigned but its value is never read.",
+        "suggestion": "Remove the unused variable to improve readability and reduce memory overhead.",
+        "metric_value": 1,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "DeadMethod",
+        "severity": "medium",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "oldValidateToken",
+        "line_number": 114,
+        "message": "Private method 'oldValidateToken' is never called anywhere in the project.",
+        "suggestion": "Safely delete this unreferenced method.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "HighCyclomaticComplexity",
+        "severity": "high",
+        "class_name": "demo.PaymentGateway",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\PaymentGateway.java",
+        "method_name": "processCharge",
+        "line_number": 7,
+        "message": "Method 'processCharge' has a Cyclomatic Complexity of 14 (threshold: 10).",
+        "suggestion": "Refactor by breaking down complex branch structures using polymorphism or early returns.",
+        "metric_value": 14,
+        "metric_threshold": 10
+      },
+      {
+        "rule": "HighCyclomaticComplexity",
+        "severity": "high",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "login",
+        "line_number": 15,
+        "message": "Method 'login' has a Cyclomatic Complexity of 13 (threshold: 10).",
+        "suggestion": "Refactor by breaking down complex branch structures using polymorphism or early returns.",
+        "metric_value": 13,
+        "metric_threshold": 10
+      },
+      {
+        "rule": "HighCyclomaticComplexity",
+        "severity": "critical",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "processPayment",
+        "line_number": 54,
+        "message": "Method 'processPayment' has a Cyclomatic Complexity of 23 (threshold: 10).",
+        "suggestion": "Refactor by breaking down complex branch structures using polymorphism or early returns.",
+        "metric_value": 23,
+        "metric_threshold": 10
+      },
+      {
+        "rule": "DeepNesting",
+        "severity": "medium",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "verifyUserSession",
+        "line_number": 86,
+        "message": "Control structure is nested 5 levels deep (threshold: 3).",
+        "suggestion": "Use guard clauses (early returns) to flatten nested conditional logic.",
+        "metric_value": 5,
+        "metric_threshold": 3
+      },
+      {
+        "rule": "EmptyCatchBlock",
+        "severity": "high",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "loadConfig",
+        "line_number": 101,
+        "message": "Empty catch block hides potential runtime failures.",
+        "suggestion": "Log the exception or rethrow it as a custom application runtime exception.",
+        "metric_value": 1,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.InvoiceGenerator",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\InvoiceGenerator.java",
+        "method_name": "createInvoice",
+        "line_number": 12,
+        "message": "Magic number '0.15' detected.",
+        "suggestion": "Extract '0.15' into a static final constant with a descriptive name.",
+        "metric_value": 0.15,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.InvoiceGenerator",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\InvoiceGenerator.java",
+        "method_name": "createInvoice",
+        "line_number": 15,
+        "message": "Magic number '25.0' detected.",
+        "suggestion": "Extract '25.0' into a static final constant with a descriptive name.",
+        "metric_value": 25.0,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.InvoiceGenerator",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\InvoiceGenerator.java",
+        "method_name": "calculateTotal",
+        "line_number": 25,
+        "message": "Magic number '0.18' detected.",
+        "suggestion": "Extract '0.18' into a static final constant with a descriptive name.",
+        "metric_value": 0.18,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.InvoiceGenerator",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\InvoiceGenerator.java",
+        "method_name": "calculateTotal",
+        "line_number": 28,
+        "message": "Magic number '30.0' detected.",
+        "suggestion": "Extract '30.0' into a static final constant with a descriptive name.",
+        "metric_value": 30.0,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.MainApplication",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\MainApplication.java",
+        "method_name": "main",
+        "line_number": 13,
+        "message": "Magic number '1850.0' detected.",
+        "suggestion": "Extract '1850.0' into a static final constant with a descriptive name.",
+        "metric_value": 1850.0,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.MainApplication",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\MainApplication.java",
+        "method_name": "main",
+        "line_number": 17,
+        "message": "Magic number '600' detected.",
+        "suggestion": "Extract '600' into a static final constant with a descriptive name.",
+        "metric_value": 600,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.MainApplication",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\MainApplication.java",
+        "method_name": "main",
+        "line_number": 18,
+        "message": "Magic number '1250.5' detected.",
+        "suggestion": "Extract '1250.5' into a static final constant with a descriptive name.",
+        "metric_value": 1250.5,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.PaymentGateway",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\PaymentGateway.java",
+        "method_name": "processCharge",
+        "line_number": 8,
+        "message": "Magic number '12' detected.",
+        "suggestion": "Extract '12' into a static final constant with a descriptive name.",
+        "metric_value": 12,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.PaymentGateway",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\PaymentGateway.java",
+        "method_name": "processCharge",
+        "line_number": 21,
+        "message": "Magic number '9999' detected.",
+        "suggestion": "Extract '9999' into a static final constant with a descriptive name.",
+        "metric_value": 9999,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.PaymentGateway",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\PaymentGateway.java",
+        "method_name": "processCharge",
+        "line_number": 25,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "login",
+        "line_number": 21,
+        "message": "Magic number '8' detected.",
+        "suggestion": "Extract '8' into a static final constant with a descriptive name.",
+        "metric_value": 8,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "processPayment",
+        "line_number": 69,
+        "message": "Magic number '50' detected.",
+        "suggestion": "Extract '50' into a static final constant with a descriptive name.",
+        "metric_value": 50,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "processPayment",
+        "line_number": 69,
+        "message": "Magic number '5000' detected.",
+        "suggestion": "Extract '5000' into a static final constant with a descriptive name.",
+        "metric_value": 5000,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "processPayment",
+        "line_number": 70,
+        "message": "Magic number '12' detected.",
+        "suggestion": "Extract '12' into a static final constant with a descriptive name.",
+        "metric_value": 12,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "processPayment",
+        "line_number": 70,
+        "message": "Magic number '20' detected.",
+        "suggestion": "Extract '20' into a static final constant with a descriptive name.",
+        "metric_value": 20,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "processPayment",
+        "line_number": 75,
+        "message": "Magic number '9999' detected.",
+        "suggestion": "Extract '9999' into a static final constant with a descriptive name.",
+        "metric_value": 9999,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "processPayment",
+        "line_number": 78,
+        "message": "Magic number '7' detected.",
+        "suggestion": "Extract '7' into a static final constant with a descriptive name.",
+        "metric_value": 7,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "processPayment",
+        "line_number": 78,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "verifyUserSession",
+        "line_number": 88,
+        "message": "Magic number '5' detected.",
+        "suggestion": "Extract '5' into a static final constant with a descriptive name.",
+        "metric_value": 5,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "calculateTimeout",
+        "line_number": 111,
+        "message": "Magic number '86400' detected.",
+        "suggestion": "Extract '86400' into a static final constant with a descriptive name.",
+        "metric_value": 86400,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "registerUser",
+        "line_number": 122,
+        "message": "Magic number '8' detected.",
+        "suggestion": "Extract '8' into a static final constant with a descriptive name.",
+        "metric_value": 8,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "HardcodedCredentials",
+        "severity": "critical",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "connectDatabase",
+        "line_number": 50,
+        "message": "Possible hardcoded password found assigned to variable 'dbPassword'.",
+        "suggestion": "Move sensitive credentials to external environment variables or a secret vault.",
+        "metric_value": 1,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "HardcodedCredentials",
+        "severity": "critical",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "connectDatabase",
+        "line_number": 50,
+        "message": "Possible hardcoded password found assigned to variable 'dbPassword'.",
+        "suggestion": "Move sensitive credentials to external environment variables or a secret vault.",
+        "metric_value": 1,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "FeatureEnvy",
+        "severity": "medium",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "processPayment",
+        "line_number": 54,
+        "message": "Method 'processPayment' accesses 'String' data 6 times (threshold: 4).",
+        "suggestion": "Move this method directly into the 'String' class so data and behavior live together.",
+        "metric_value": 6,
+        "metric_threshold": 4
+      },
+      {
+        "rule": "StringConcatenationInLoop",
+        "severity": "medium",
+        "class_name": "demo.ReportExporter",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\ReportExporter.java",
+        "method_name": "exportCsv",
+        "line_number": 17,
+        "message": "String concatenation '+' used inside a loop at line 17.",
+        "suggestion": "Replace string concatenation with an explicit StringBuilder instance initialized outside the loop.",
+        "metric_value": 1,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "UnclosedResource",
+        "severity": "critical",
+        "class_name": "demo.ReportExporter",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\ReportExporter.java",
+        "method_name": "exportCsv",
+        "line_number": 15,
+        "message": "Resource opened at line 15 may never be closed.",
+        "suggestion": "Wrap the stream in a try-with-resources statement to prevent system resource leaks.",
+        "metric_value": 1,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.AuditLogService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\AuditLogService.java",
+        "method_name": "getLogs",
+        "line_number": 21,
+        "message": "Public API method 'getLogs' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.CustomerProfile",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\CustomerProfile.java",
+        "method_name": "setVip",
+        "line_number": 52,
+        "message": "Public API method 'setVip' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.InvoiceGenerator",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\InvoiceGenerator.java",
+        "method_name": "createInvoice",
+        "line_number": 9,
+        "message": "Public API method 'createInvoice' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.InvoiceGenerator",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\InvoiceGenerator.java",
+        "method_name": "calculateTotal",
+        "line_number": 22,
+        "message": "Public API method 'calculateTotal' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.InvoiceGenerator",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\InvoiceGenerator.java",
+        "method_name": "getInvoices",
+        "line_number": 33,
+        "message": "Public API method 'getInvoices' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.MainApplication",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\MainApplication.java",
+        "method_name": "main",
+        "line_number": 4,
+        "message": "Public API method 'main' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.OrderManagementService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\OrderManagementService.java",
+        "method_name": "finalizeOrder",
+        "line_number": 88,
+        "message": "Public API method 'finalizeOrder' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.PaymentGateway",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\PaymentGateway.java",
+        "method_name": "processCharge",
+        "line_number": 7,
+        "message": "Public API method 'processCharge' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.PaymentGateway",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\PaymentGateway.java",
+        "method_name": "getApiToken",
+        "line_number": 32,
+        "message": "Public API method 'getApiToken' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.ReportExporter",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\ReportExporter.java",
+        "method_name": "exportCsv",
+        "line_number": 12,
+        "message": "Public API method 'exportCsv' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.ReportExporter",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\ReportExporter.java",
+        "method_name": "getRows",
+        "line_number": 29,
+        "message": "Public API method 'getRows' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "login",
+        "line_number": 15,
+        "message": "Public API method 'login' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "connectDatabase",
+        "line_number": 49,
+        "message": "Public API method 'connectDatabase' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "processPayment",
+        "line_number": 54,
+        "message": "Public API method 'processPayment' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "createUserProfile",
+        "line_number": 81,
+        "message": "Public API method 'createUserProfile' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "verifyUserSession",
+        "line_number": 86,
+        "message": "Public API method 'verifyUserSession' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "loadConfig",
+        "line_number": 101,
+        "message": "Public API method 'loadConfig' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "registerUser",
+        "line_number": 118,
+        "message": "Public API method 'registerUser' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "demo.UserService",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\src\\demo\\UserService.java",
+        "method_name": "getLoginHistory",
+        "line_number": 139,
+        "message": "Public API method 'getLoginHistory' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1
+      }
+    ],
+    "total_score": 133,
+    "severity_counts": {
+      "high": 4,
+      "medium": 6,
+      "critical": 5,
+      "low": 41
+    },
+    "rule_counts": {
+      "LongMethod": 1,
+      "ExcessiveParameterList": 2,
+      "GodClass": 1,
+      "UnusedVariable": 1,
+      "DeadMethod": 1,
+      "HighCyclomaticComplexity": 3,
+      "DeepNesting": 1,
+      "EmptyCatchBlock": 1,
+      "MagicNumber": 21,
+      "HardcodedCredentials": 2,
+      "FeatureEnvy": 1,
+      "StringConcatenationInLoop": 1,
+      "UnclosedResource": 1,
+      "MissingJavadoc": 19
+    },
+    "top_offenders": [
+      {
+        "class_name": "demo.UserService",
+        "score": 83,
+        "issue_count": 31
+      },
+      {
+        "class_name": "demo.ReportExporter",
+        "score": 15,
+        "issue_count": 4
+      },
+      {
+        "class_name": "demo.OrderManagementService",
+        "score": 11,
+        "issue_count": 2
+      },
+      {
+        "class_name": "demo.PaymentGateway",
+        "score": 11,
+        "issue_count": 6
+      },
+      {
+        "class_name": "demo.InvoiceGenerator",
+        "score": 7,
+        "issue_count": 7
+      },
+      {
+        "class_name": "demo.MainApplication",
+        "score": 4,
+        "issue_count": 4
+      },
+      {
+        "class_name": "demo.AuditLogService",
+        "score": 1,
+        "issue_count": 1
+      },
+      {
+        "class_name": "demo.CustomerProfile",
+        "score": 1,
+        "issue_count": 1
+      }
+    ]
+  },
+  "dependency_report": {
+    "build_tool": "maven",
+    "project_path": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2",
+    "dependencies": [
+      {
+        "group": "org.springframework",
+        "artifact": "spring-core",
+        "version": "5.2.0.RELEASE",
+        "scope": "compile",
+        "source_file": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\pom.xml"
+      },
+      {
+        "group": "org.apache.logging.log4j",
+        "artifact": "log4j-core",
+        "version": "2.14.1",
+        "scope": "compile",
+        "source_file": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\pom.xml"
+      },
+      {
+        "group": "com.fasterxml.jackson.core",
+        "artifact": "jackson-databind",
+        "version": "2.13.4",
+        "scope": "compile",
+        "source_file": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\pom.xml"
+      },
+      {
+        "group": "junit",
+        "artifact": "junit",
+        "version": "4.13.2",
+        "scope": "test",
+        "source_file": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\pom.xml"
+      },
+      {
+        "group": "org.projectlombok",
+        "artifact": "lombok",
+        "version": "1.18.24",
+        "scope": "provided",
+        "source_file": "K:\\PROJECTS\\MINI PROJECT\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmptju013c8\\sample project 2\\pom.xml"
+      }
+    ],
+    "plugins": [
+      {
+        "name": "maven-compiler-plugin",
+        "version": "3.10.1"
+      },
+      {
+        "name": "spring-boot-maven-plugin",
+        "version": "2.7.0"
+      }
+    ],
+    "detected_frameworks": [
+      "JUnit",
+      "Jackson",
+      "Log4j",
+      "Lombok",
+      "Spring"
+    ],
+    "outdated_dependencies": [
+      {
+        "group": "org.springframework",
+        "artifact": "spring-core",
+        "current_version": "5.2.0.RELEASE",
+        "minimum_safe_version": "5.3.20",
+        "reason": "Spring4Shell-era fixes (CVE-2022-22965) landed around 5.3.18+; stay current to avoid known RCE issues.",
+        "severity": "high"
+      },
+      {
+        "group": "org.apache.logging.log4j",
+        "artifact": "log4j-core",
+        "current_version": "2.14.1",
+        "minimum_safe_version": "2.17.1",
+        "reason": "CVE-2021-44228 (Log4Shell) and related follow-up CVEs affect versions before 2.17.1.",
+        "severity": "critical"
+      }
+    ],
+    "warnings": []
+  }
+}

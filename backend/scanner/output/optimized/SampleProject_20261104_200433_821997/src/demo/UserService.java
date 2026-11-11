@@ -1,0 +1,1 @@
+With `"USD".equals(currency)`, if `currency` is null, `isSupportedCurrency` returns false instead of NPE. But wait, in Java standard behavior refactoring,

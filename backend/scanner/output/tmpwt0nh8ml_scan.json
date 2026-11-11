@@ -1,0 +1,1954 @@
+{
+  "project_name": "tmpwt0nh8ml",
+  "project_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml",
+  "classes": [
+    {
+      "name": "TicTacToeGUI",
+      "package": "",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [
+        "javax.swing",
+        "javax.swing.plaf.FontUIResource",
+        "java.awt",
+        "java.awt.event",
+        "java.util.ArrayList",
+        "java.util.Random",
+        "javax.sound.sampled"
+      ],
+      "fields": [
+        {
+          "name": "buttons",
+          "datatype": "JButton[][]",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 10
+        },
+        {
+          "name": "currentPlayer",
+          "datatype": "char",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 11
+        },
+        {
+          "name": "xWins",
+          "datatype": "int",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 12
+        },
+        {
+          "name": "oWins",
+          "datatype": "int",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 12
+        },
+        {
+          "name": "draws",
+          "datatype": "int",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 12
+        },
+        {
+          "name": "scoreLabel",
+          "datatype": "JLabel",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 13
+        },
+        {
+          "name": "vsComputer",
+          "datatype": "boolean",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 14
+        },
+        {
+          "name": "difficulty",
+          "datatype": "String",
+          "modifiers": [
+            "private"
+          ],
+          "line_number": 15
+        }
+      ],
+      "methods": [
+        {
+          "name": "TicTacToeGUI",
+          "return_type": "",
+          "parameters": [],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 17,
+          "line_count": 83,
+          "is_constructor": true,
+          "non_blank_lines": 67,
+          "body_hash": "ea75b5801c79a4a46bdd169fe569700d",
+          "cyclomatic_complexity": 6,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 450,
+              "line": 19
+            },
+            {
+              "value": 550,
+              "line": 19
+            },
+            {
+              "value": 14,
+              "line": 24
+            },
+            {
+              "value": 18,
+              "line": 72
+            },
+            {
+              "value": 245,
+              "line": 74
+            },
+            {
+              "value": 245,
+              "line": 74
+            },
+            {
+              "value": 245,
+              "line": 74
+            },
+            {
+              "value": 3,
+              "line": 80
+            },
+            {
+              "value": 3,
+              "line": 80
+            },
+            {
+              "value": 8,
+              "line": 80
+            },
+            {
+              "value": 8,
+              "line": 80
+            },
+            {
+              "value": 230,
+              "line": 81
+            },
+            {
+              "value": 230,
+              "line": 81
+            },
+            {
+              "value": 230,
+              "line": 81
+            },
+            {
+              "value": 3,
+              "line": 82
+            },
+            {
+              "value": 3,
+              "line": 83
+            },
+            {
+              "value": 60,
+              "line": 85
+            },
+            {
+              "value": 33,
+              "line": 88
+            },
+            {
+              "value": 33,
+              "line": 88
+            },
+            {
+              "value": 33,
+              "line": 88
+            },
+            {
+              "value": 180,
+              "line": 89
+            },
+            {
+              "value": 180,
+              "line": 89
+            },
+            {
+              "value": 180,
+              "line": 89
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "setTitle",
+            "setSize",
+            "setDefaultCloseOperation",
+            "setLayout",
+            "setLocationRelativeTo",
+            "setUIFont",
+            "addActionListener",
+            "resetBoard",
+            "addActionListener",
+            "resetScores",
+            "addActionListener",
+            "exit",
+            "add",
+            "add",
+            "addSeparator",
+            "add",
+            "add",
+            "setJMenuBar",
+            "showOptionDialog",
+            "showInputDialog",
+            "setFont",
+            "setOpaque",
+            "setBackground",
+            "setBorder",
+            "createEmptyBorder",
+            "add",
+            "add",
+            "setBackground",
+            "setFont",
+            "setFocusPainted",
+            "setBackground",
+            "setForeground",
+            "setBorder",
+            "createLineBorder",
+            "addActionListener",
+            "add",
+            "add",
+            "setVisible"
+          ],
+          "external_type_accesses": {
+            "newGame": 1,
+            "resetScores": 1,
+            "exit": 1,
+            "gameMenu": 4,
+            "menuBar": 1,
+            "topPanel": 1,
+            "boardPanel": 2
+          },
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "actionPerformed",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "e",
+              "datatype": "ActionEvent"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [
+            "Override"
+          ],
+          "line_number": 100,
+          "line_count": 27,
+          "is_constructor": false,
+          "non_blank_lines": 20,
+          "body_hash": "968307402930d76467f0d060747d199f",
+          "cyclomatic_complexity": 11,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "getSource",
+            "getText",
+            "equals",
+            "setText",
+            "valueOf",
+            "playSound",
+            "checkWin",
+            "playSound",
+            "showMessageDialog",
+            "askPlayAgain",
+            "isBoardFull",
+            "playSound",
+            "showMessageDialog",
+            "askPlayAgain",
+            "computerMove"
+          ],
+          "external_type_accesses": {
+            "btn": 2
+          },
+          "parameter_type_accesses": {
+            "ActionEvent": 1
+          },
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "computerMove",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 127,
+          "line_count": 24,
+          "is_constructor": false,
+          "non_blank_lines": 20,
+          "body_hash": "831006eebdc87856dee2d33f64778f11",
+          "cyclomatic_complexity": 7,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "randomMove",
+            "smartMove",
+            "bestMove",
+            "checkWin",
+            "playSound",
+            "showMessageDialog",
+            "askPlayAgain",
+            "isBoardFull",
+            "playSound",
+            "showMessageDialog",
+            "askPlayAgain"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "randomMove",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 151,
+          "line_count": 8,
+          "is_constructor": false,
+          "non_blank_lines": 6,
+          "body_hash": "e3c857539e56aeb3e207d5742dbe1ea0",
+          "cyclomatic_complexity": 7,
+          "max_nesting_depth": 3,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 3,
+              "line": 153
+            },
+            {
+              "value": 3,
+              "line": 154
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "getText",
+            "equals",
+            "add",
+            "isEmpty",
+            "get",
+            "setText",
+            "nextInt",
+            "size"
+          ],
+          "external_type_accesses": {
+            "empty": 4
+          },
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "smartMove",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 159,
+          "line_count": 6,
+          "is_constructor": false,
+          "non_blank_lines": 4,
+          "body_hash": "df6ad1da2651df1b5c5e4f3f1e1f091e",
+          "cyclomatic_complexity": 5,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "tryWinOrBlock",
+            "tryWinOrBlock",
+            "randomMove"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "tryWinOrBlock",
+          "return_type": "boolean",
+          "parameters": [
+            {
+              "name": "player",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 165,
+          "line_count": 9,
+          "is_constructor": false,
+          "non_blank_lines": 7,
+          "body_hash": "df1916b6291086cc6262a64611e87fff",
+          "cyclomatic_complexity": 6,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 3,
+              "line": 166
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "canWin",
+            "canWin",
+            "canWin",
+            "canWin"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "canWin",
+          "return_type": "boolean",
+          "parameters": [
+            {
+              "name": "b1",
+              "datatype": "JButton"
+            },
+            {
+              "name": "b2",
+              "datatype": "JButton"
+            },
+            {
+              "name": "b3",
+              "datatype": "JButton"
+            },
+            {
+              "name": "player",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 174,
+          "line_count": 7,
+          "is_constructor": false,
+          "non_blank_lines": 5,
+          "body_hash": "61d28e0389b0f911812e7dfd829ca40b",
+          "cyclomatic_complexity": 13,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "setText",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "setText",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "setText"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {
+            "JButton": 12
+          },
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "bestMove",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 181,
+          "line_count": 14,
+          "is_constructor": false,
+          "non_blank_lines": 12,
+          "body_hash": "abad291413b3d722855f54ac2492ad6f",
+          "cyclomatic_complexity": 8,
+          "max_nesting_depth": 4,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 3,
+              "line": 184
+            },
+            {
+              "value": 3,
+              "line": 185
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "getText",
+            "equals",
+            "setText",
+            "minimax",
+            "setText",
+            "setText"
+          ],
+          "external_type_accesses": {
+            "best": 1
+          },
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "minimax",
+          "return_type": "int",
+          "parameters": [
+            {
+              "name": "isMax",
+              "datatype": "boolean"
+            }
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 195,
+          "line_count": 18,
+          "is_constructor": false,
+          "non_blank_lines": 14,
+          "body_hash": "44a9ad951bfb2370ede2bcc5dee6a119",
+          "cyclomatic_complexity": 14,
+          "max_nesting_depth": 3,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 3,
+              "line": 201
+            },
+            {
+              "value": 3,
+              "line": 202
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "checkWinner",
+            "checkWinner",
+            "isBoardFull",
+            "getText",
+            "equals",
+            "setText",
+            "minimax",
+            "setText",
+            "max",
+            "min"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "checkWin",
+          "return_type": "boolean",
+          "parameters": [],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 213,
+          "line_count": 2,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 2,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "checkWinner",
+            "checkWinner"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "checkWinner",
+          "return_type": "boolean",
+          "parameters": [
+            {
+              "name": "player",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 215,
+          "line_count": 18,
+          "is_constructor": false,
+          "non_blank_lines": 16,
+          "body_hash": "cb63c780b8d250fc63b58c5b90e980d2",
+          "cyclomatic_complexity": 17,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 3,
+              "line": 216
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "highlight",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "highlight",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "highlight",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "getText",
+            "equals",
+            "highlight"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "highlight",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "b1",
+              "datatype": "JButton"
+            },
+            {
+              "name": "b2",
+              "datatype": "JButton"
+            },
+            {
+              "name": "b3",
+              "datatype": "JButton"
+            }
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 233,
+          "line_count": 7,
+          "is_constructor": false,
+          "non_blank_lines": 5,
+          "body_hash": "d8436ea356fea27802d2929a82683c0d",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "value": 144,
+              "line": 234
+            },
+            {
+              "value": 238,
+              "line": 234
+            },
+            {
+              "value": 144,
+              "line": 234
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "setBackground",
+            "setBackground",
+            "setBackground"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {
+            "JButton": 3
+          },
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "isBoardFull",
+          "return_type": "boolean",
+          "parameters": [],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 240,
+          "line_count": 7,
+          "is_constructor": false,
+          "non_blank_lines": 5,
+          "body_hash": "214fb694fc148ee72d24e5bda770dd86",
+          "cyclomatic_complexity": 5,
+          "max_nesting_depth": 3,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "getText",
+            "equals"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "askPlayAgain",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 247,
+          "line_count": 7,
+          "is_constructor": false,
+          "non_blank_lines": 5,
+          "body_hash": "9d4708b6a19d8f281509ecd73b059eed",
+          "cyclomatic_complexity": 3,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "updateScoreboard",
+            "showConfirmDialog",
+            "resetBoard",
+            "exit"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "resetBoard",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 254,
+          "line_count": 9,
+          "is_constructor": false,
+          "non_blank_lines": 7,
+          "body_hash": "eefeda1fc839ff3149504cb513a2b394",
+          "cyclomatic_complexity": 4,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "setText",
+            "setBackground"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "updateScoreboard",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 263,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 2,
+          "body_hash": "c0fb5230d7fd1e3da21f7f05315b8348",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "setText"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "resetScores",
+          "return_type": "void",
+          "parameters": [],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 267,
+          "line_count": 6,
+          "is_constructor": false,
+          "non_blank_lines": 3,
+          "body_hash": "6f8925e7d170d6cd02c3267890d114b0",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "updateScoreboard"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "playSound",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "fileName",
+              "datatype": "String"
+            }
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "line_number": 273,
+          "line_count": 9,
+          "is_constructor": false,
+          "non_blank_lines": 6,
+          "body_hash": "dad462677548d249c83a9c4f93b566e0",
+          "cyclomatic_complexity": 2,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 273,
+          "method_calls": [
+            "getClip",
+            "open",
+            "getAudioInputStream",
+            "start",
+            "println",
+            "getMessage"
+          ],
+          "external_type_accesses": {
+            "clip": 2
+          },
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "setUIFont",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "f",
+              "datatype": "FontUIResource"
+            }
+          ],
+          "modifiers": [
+            "public",
+            "static"
+          ],
+          "annotations": [],
+          "line_number": 282,
+          "line_count": 9,
+          "is_constructor": false,
+          "non_blank_lines": 7,
+          "body_hash": "249ba623628f950a1996da5d401ee83b",
+          "cyclomatic_complexity": 4,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "getDefaults",
+            "keys",
+            "hasMoreElements",
+            "nextElement",
+            "get",
+            "put"
+          ],
+          "external_type_accesses": {
+            "keys": 2
+          },
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "main",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "args",
+              "datatype": "String[]"
+            }
+          ],
+          "modifiers": [
+            "public",
+            "static"
+          ],
+          "annotations": [],
+          "line_number": 291,
+          "line_count": 5,
+          "is_constructor": false,
+          "non_blank_lines": 3,
+          "body_hash": "d47fdba188fce370381336249d1e2190",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [
+            "invokeLater"
+          ],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": false,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "JFrame",
+      "implements": [
+        "ActionListener"
+      ],
+      "annotations": [],
+      "line_count": 295,
+      "mutable_static_fields": []
+    }
+  ],
+  "dependencies": [],
+  "errors": [],
+  "statistics": {
+    "stack": "java",
+    "language": "java",
+    "languages": [
+      "java"
+    ],
+    "total_files": 1,
+    "parsed_files": 1,
+    "failed_files": 0,
+    "total_classes": 1,
+    "total_interfaces": 0,
+    "total_enums": 0,
+    "total_methods": 20,
+    "total_fields": 8,
+    "dependency_edges": 0,
+    "circular_dependencies": 0,
+    "scan_time_seconds": 1.769,
+    "graph": {
+      "node_count": 1,
+      "edge_count": 0,
+      "coupling_metrics": {
+        "TicTacToeGUI": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        }
+      },
+      "circular_dependencies": []
+    }
+  },
+  "debt_report": {
+    "project_name": "tmpwt0nh8ml",
+    "issues": [
+      {
+        "rule": "LongMethod",
+        "severity": "critical",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 17,
+        "message": "Method 'TicTacToeGUI' is 83 lines long (threshold: 30).",
+        "suggestion": "Consider extracting cohesive blocks of this method into smaller, well-named private methods (Extract Method).",
+        "metric_value": 83,
+        "metric_threshold": 30,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "HighCyclomaticComplexity",
+        "severity": "high",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "actionPerformed",
+        "line_number": 100,
+        "message": "Method 'actionPerformed' has a Cyclomatic Complexity of 11 (threshold: 10).",
+        "suggestion": "Refactor by breaking down complex branch structures using polymorphism or early returns.",
+        "metric_value": 11,
+        "metric_threshold": 10,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "HighCyclomaticComplexity",
+        "severity": "high",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "canWin",
+        "line_number": 174,
+        "message": "Method 'canWin' has a Cyclomatic Complexity of 13 (threshold: 10).",
+        "suggestion": "Refactor by breaking down complex branch structures using polymorphism or early returns.",
+        "metric_value": 13,
+        "metric_threshold": 10,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "HighCyclomaticComplexity",
+        "severity": "high",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "minimax",
+        "line_number": 195,
+        "message": "Method 'minimax' has a Cyclomatic Complexity of 14 (threshold: 10).",
+        "suggestion": "Refactor by breaking down complex branch structures using polymorphism or early returns.",
+        "metric_value": 14,
+        "metric_threshold": 10,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "HighCyclomaticComplexity",
+        "severity": "critical",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "checkWinner",
+        "line_number": 215,
+        "message": "Method 'checkWinner' has a Cyclomatic Complexity of 17 (threshold: 10).",
+        "suggestion": "Refactor by breaking down complex branch structures using polymorphism or early returns.",
+        "metric_value": 17,
+        "metric_threshold": 10,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "DeepNesting",
+        "severity": "medium",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "bestMove",
+        "line_number": 181,
+        "message": "Control structure is nested 4 levels deep (threshold: 3).",
+        "suggestion": "Use guard clauses (early returns) to flatten nested conditional logic.",
+        "metric_value": 4,
+        "metric_threshold": 3,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 19,
+        "message": "Magic number '450' detected.",
+        "suggestion": "Extract '450' into a static final constant with a descriptive name.",
+        "metric_value": 450,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 19,
+        "message": "Magic number '550' detected.",
+        "suggestion": "Extract '550' into a static final constant with a descriptive name.",
+        "metric_value": 550,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 24,
+        "message": "Magic number '14' detected.",
+        "suggestion": "Extract '14' into a static final constant with a descriptive name.",
+        "metric_value": 14,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 72,
+        "message": "Magic number '18' detected.",
+        "suggestion": "Extract '18' into a static final constant with a descriptive name.",
+        "metric_value": 18,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 74,
+        "message": "Magic number '245' detected.",
+        "suggestion": "Extract '245' into a static final constant with a descriptive name.",
+        "metric_value": 245,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 80,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 80,
+        "message": "Magic number '8' detected.",
+        "suggestion": "Extract '8' into a static final constant with a descriptive name.",
+        "metric_value": 8,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 81,
+        "message": "Magic number '230' detected.",
+        "suggestion": "Extract '230' into a static final constant with a descriptive name.",
+        "metric_value": 230,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 82,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 83,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 85,
+        "message": "Magic number '60' detected.",
+        "suggestion": "Extract '60' into a static final constant with a descriptive name.",
+        "metric_value": 60,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 88,
+        "message": "Magic number '33' detected.",
+        "suggestion": "Extract '33' into a static final constant with a descriptive name.",
+        "metric_value": 33,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "TicTacToeGUI",
+        "line_number": 89,
+        "message": "Magic number '180' detected.",
+        "suggestion": "Extract '180' into a static final constant with a descriptive name.",
+        "metric_value": 180,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "randomMove",
+        "line_number": 153,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "randomMove",
+        "line_number": 154,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "tryWinOrBlock",
+        "line_number": 166,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "bestMove",
+        "line_number": 184,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "bestMove",
+        "line_number": 185,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "minimax",
+        "line_number": 201,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "minimax",
+        "line_number": 202,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "checkWinner",
+        "line_number": 216,
+        "message": "Magic number '3' detected.",
+        "suggestion": "Extract '3' into a static final constant with a descriptive name.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "highlight",
+        "line_number": 234,
+        "message": "Magic number '144' detected.",
+        "suggestion": "Extract '144' into a static final constant with a descriptive name.",
+        "metric_value": 144,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "highlight",
+        "line_number": 234,
+        "message": "Magic number '238' detected.",
+        "suggestion": "Extract '238' into a static final constant with a descriptive name.",
+        "metric_value": 238,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "FeatureEnvy",
+        "severity": "medium",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "canWin",
+        "line_number": 174,
+        "message": "Method 'canWin' accesses 'JButton' data 12 times (threshold: 4).",
+        "suggestion": "Move this method directly into the 'JButton' class so data and behavior live together.",
+        "metric_value": 12,
+        "metric_threshold": 4,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "GenericExceptionHandling",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "playSound",
+        "line_number": 273,
+        "message": "Method catches generic 'Exception' instead of domain-specific exceptions.",
+        "suggestion": "Catch specific exceptions to allow targeted recovery.",
+        "metric_value": 1,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "actionPerformed",
+        "line_number": 100,
+        "message": "Public API method 'actionPerformed' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "setUIFont",
+        "line_number": 282,
+        "message": "Public API method 'setUIFont' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingJavadoc",
+        "severity": "low",
+        "class_name": "TicTacToeGUI",
+        "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml\\TicTacToeGUI.java",
+        "method_name": "main",
+        "line_number": 291,
+        "message": "Public API method 'main' lacks Javadoc comments.",
+        "suggestion": "Add documentation specifying parameter invariants, return values, and thrown exceptions.",
+        "metric_value": 0,
+        "metric_threshold": 1,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      }
+    ],
+    "total_score": 71,
+    "severity_counts": {
+      "critical": 2,
+      "high": 3,
+      "medium": 2,
+      "low": 27
+    },
+    "rule_counts": {
+      "LongMethod": 1,
+      "HighCyclomaticComplexity": 4,
+      "DeepNesting": 1,
+      "MagicNumber": 23,
+      "FeatureEnvy": 1,
+      "GenericExceptionHandling": 1,
+      "MissingJavadoc": 3
+    },
+    "top_offenders": [
+      {
+        "class_name": "TicTacToeGUI",
+        "score": 71,
+        "issue_count": 34
+      }
+    ]
+  },
+  "dependency_report": {
+    "build_tool": "unknown",
+    "project_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmpwt0nh8ml",
+    "dependencies": [],
+    "plugins": [],
+    "detected_frameworks": [],
+    "outdated_dependencies": [],
+    "warnings": [
+      "No pom.xml or build.gradle(.kts) found in project."
+    ]
+  }
+}

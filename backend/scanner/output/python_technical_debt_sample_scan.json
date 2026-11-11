@@ -1,0 +1,2005 @@
+{
+  "project_name": "python_technical_debt_sample",
+  "project_path": "C:\\mini pro\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmp7segbzc3\\python_technical_debt_sample",
+  "classes": [
+    {
+      "name": "LegacyCustomer",
+      "package": "",
+      "file_path": "C:\\mini pro\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmp7segbzc3\\python_technical_debt_sample\\legacy.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "__init__",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 19,
+          "line_count": 14,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "line": 24,
+              "value": 0
+            }
+          ],
+          "unused_local_vars": [
+            {
+              "name": "address",
+              "line": 19
+            },
+            {
+              "name": "age",
+              "line": 19
+            },
+            {
+              "name": "city",
+              "line": 19
+            },
+            {
+              "name": "country",
+              "line": 19
+            },
+            {
+              "name": "email",
+              "line": 19
+            },
+            {
+              "name": "extra1",
+              "line": 19
+            },
+            {
+              "name": "extra2",
+              "line": 19
+            },
+            {
+              "name": "extra3",
+              "line": 19
+            },
+            {
+              "name": "gender",
+              "line": 19
+            },
+            {
+              "name": "name",
+              "line": 19
+            },
+            {
+              "name": "phone",
+              "line": 19
+            },
+            {
+              "name": "state",
+              "line": 19
+            },
+            {
+              "name": "zipcode",
+              "line": 19
+            }
+          ],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 32,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "NotificationService",
+      "package": "",
+      "file_path": "C:\\mini pro\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmp7segbzc3\\python_technical_debt_sample\\notification.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "send_email",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "email",
+              "datatype": "object"
+            },
+            {
+              "name": "message",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 2,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "send_sms",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "phone",
+              "datatype": "object"
+            },
+            {
+              "name": "message",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 7,
+          "line_count": 3,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "notify_user",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "user",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 11,
+          "line_count": 9,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 4,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "notify_user_again",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "user",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 21,
+          "line_count": 9,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 4,
+          "max_nesting_depth": 2,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 29,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "OrderManager",
+      "package": "",
+      "file_path": "C:\\mini pro\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmp7segbzc3\\python_technical_debt_sample\\order.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "create_order",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "user_id",
+              "datatype": "object"
+            },
+            {
+              "name": "items",
+              "datatype": "object"
+            },
+            {
+              "name": "payment_method",
+              "datatype": "object"
+            },
+            {
+              "name": "user",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 9,
+          "line_count": 107,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 35,
+          "max_nesting_depth": 5,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "line": 24,
+              "value": 0
+            },
+            {
+              "line": 20,
+              "value": 0
+            },
+            {
+              "line": 87,
+              "value": 0
+            },
+            {
+              "line": 39,
+              "value": 0
+            },
+            {
+              "line": 53,
+              "value": 2
+            },
+            {
+              "line": 55,
+              "value": 10
+            },
+            {
+              "line": 56,
+              "value": 0.2
+            },
+            {
+              "line": 67,
+              "value": 10000
+            },
+            {
+              "line": 76,
+              "value": 1000
+            },
+            {
+              "line": 77,
+              "value": 50
+            },
+            {
+              "line": 49,
+              "value": 3
+            },
+            {
+              "line": 57,
+              "value": 5
+            },
+            {
+              "line": 58,
+              "value": 0.1
+            },
+            {
+              "line": 68,
+              "value": 0.2
+            },
+            {
+              "line": 69,
+              "value": 5000
+            },
+            {
+              "line": 78,
+              "value": 5000
+            },
+            {
+              "line": 79,
+              "value": 25
+            },
+            {
+              "line": 81,
+              "value": 0
+            },
+            {
+              "line": 85,
+              "value": 1
+            },
+            {
+              "line": 59,
+              "value": 3
+            },
+            {
+              "line": 60,
+              "value": 0.05
+            },
+            {
+              "line": 62,
+              "value": 0
+            },
+            {
+              "line": 70,
+              "value": 0.19
+            },
+            {
+              "line": 72,
+              "value": 0.18
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 74,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "cancel_order",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "order_id",
+              "datatype": "object"
+            },
+            {
+              "name": "user_id",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 117,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "calculate_special_price",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "price",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 122,
+          "line_count": 8,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 5,
+          "max_nesting_depth": 3,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "line": 124,
+              "value": 10000
+            },
+            {
+              "line": 125,
+              "value": 0.8
+            },
+            {
+              "line": 126,
+              "value": 5000
+            },
+            {
+              "line": 127,
+              "value": 0.9
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "legacy_order_method",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "a",
+              "datatype": "object"
+            },
+            {
+              "name": "b",
+              "datatype": "object"
+            },
+            {
+              "name": "c",
+              "datatype": "object"
+            },
+            {
+              "name": "d",
+              "datatype": "object"
+            },
+            {
+              "name": "e",
+              "datatype": "object"
+            },
+            {
+              "name": "f",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 131,
+          "line_count": 6,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 136,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "PaymentProcessor",
+      "package": "",
+      "file_path": "C:\\mini pro\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmp7segbzc3\\python_technical_debt_sample\\payment.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "pay",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "user",
+              "datatype": "object"
+            },
+            {
+              "name": "amount",
+              "datatype": "object"
+            },
+            {
+              "name": "method",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 5,
+          "line_count": 49,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 31,
+          "max_nesting_depth": 6,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "line": 7,
+              "value": 0
+            },
+            {
+              "line": 13,
+              "value": 100000
+            },
+            {
+              "line": 21,
+              "value": 200
+            },
+            {
+              "line": 23,
+              "value": 201
+            },
+            {
+              "line": 35,
+              "value": 50000
+            },
+            {
+              "line": 41,
+              "value": 200
+            },
+            {
+              "line": 25,
+              "value": 400
+            },
+            {
+              "line": 47,
+              "value": 10000
+            },
+            {
+              "line": 27,
+              "value": 401
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "refund",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "amount",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 55,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 58,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "ProductManager",
+      "package": "",
+      "file_path": "C:\\mini pro\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmp7segbzc3\\python_technical_debt_sample\\product.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "get_product",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "product_id",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 4,
+          "line_count": 2,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "add_product",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "name",
+              "datatype": "object"
+            },
+            {
+              "name": "price",
+              "datatype": "object"
+            },
+            {
+              "name": "stock",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 7,
+          "line_count": 7,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "update_stock",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "product_id",
+              "datatype": "object"
+            },
+            {
+              "name": "quantity",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 15,
+          "line_count": 9,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 2,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "line": 18,
+              "value": 3
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "delete_product",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "product_id",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 25,
+          "line_count": 7,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 31,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "UserManager",
+      "package": "",
+      "file_path": "C:\\mini pro\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmp7segbzc3\\python_technical_debt_sample\\user.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "register",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "name",
+              "datatype": "object"
+            },
+            {
+              "name": "email",
+              "datatype": "object"
+            },
+            {
+              "name": "password",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 4,
+          "line_count": 12,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 8,
+          "max_nesting_depth": 3,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "login",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "email",
+              "datatype": "object"
+            },
+            {
+              "name": "password",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 17,
+          "line_count": 5,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 4,
+          "max_nesting_depth": 3,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "line": 19,
+              "value": 3
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "reset_password",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "email",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 23,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": [
+            {
+              "line": 25,
+              "value": "Temporary password is: 123456"
+            }
+          ]
+        },
+        {
+          "name": "unused_method",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 28,
+          "line_count": 5,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "line": 30,
+              "value": 10
+            },
+            {
+              "line": 31,
+              "value": 20
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 32,
+      "mutable_static_fields": []
+    }
+  ],
+  "dependencies": [],
+  "errors": [],
+  "statistics": {
+    "stack": "python",
+    "language": "python",
+    "total_files": 11,
+    "parsed_files": 11,
+    "failed_files": 0,
+    "total_classes": 6,
+    "total_interfaces": 0,
+    "total_enums": 0,
+    "total_methods": 19,
+    "total_fields": 0,
+    "dependency_edges": 0,
+    "circular_dependencies": 0,
+    "scan_time_seconds": 0.039,
+    "graph": {
+      "node_count": 6,
+      "edge_count": 0,
+      "coupling_metrics": {
+        "LegacyCustomer": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "NotificationService": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "OrderManager": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "PaymentProcessor": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "ProductManager": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "UserManager": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        }
+      },
+      "circular_dependencies": []
+    }
+  },
+  "debt_report": {
+    "project_name": "python_technical_debt_sample",
+    "issues": [
+      {
+        "rule": "LongMethod",
+        "severity": "high",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 9,
+        "message": "Method 'create_order' is too long (107 lines).",
+        "suggestion": "Refactor into smaller helper methods or split responsibilities.",
+        "metric_value": 107,
+        "metric_threshold": 25
+      },
+      {
+        "rule": "LongMethod",
+        "severity": "high",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 5,
+        "message": "Method 'pay' is too long (49 lines).",
+        "suggestion": "Refactor into smaller helper methods or split responsibilities.",
+        "metric_value": 49,
+        "metric_threshold": 25
+      },
+      {
+        "rule": "HighCyclomaticComplexity",
+        "severity": "high",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 9,
+        "message": "Method 'create_order' has cyclomatic complexity 35.",
+        "suggestion": "Reduce branching and extract decision logic into dedicated functions.",
+        "metric_value": 35,
+        "metric_threshold": 8
+      },
+      {
+        "rule": "HighCyclomaticComplexity",
+        "severity": "high",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 5,
+        "message": "Method 'pay' has cyclomatic complexity 31.",
+        "suggestion": "Reduce branching and extract decision logic into dedicated functions.",
+        "metric_value": 31,
+        "metric_threshold": 8
+      },
+      {
+        "rule": "HighCyclomaticComplexity",
+        "severity": "medium",
+        "class_name": "UserManager",
+        "file_path": "",
+        "method_name": "register",
+        "line_number": 4,
+        "message": "Method 'register' has cyclomatic complexity 8.",
+        "suggestion": "Reduce branching and extract decision logic into dedicated functions.",
+        "metric_value": 8,
+        "metric_threshold": 8
+      },
+      {
+        "rule": "DeepNesting",
+        "severity": "medium",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 9,
+        "message": "Method 'create_order' nests logic too deeply (5).",
+        "suggestion": "Flatten conditionals and extract nested branches into helper methods.",
+        "metric_value": 5,
+        "metric_threshold": 4
+      },
+      {
+        "rule": "DeepNesting",
+        "severity": "high",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 5,
+        "message": "Method 'pay' nests logic too deeply (6).",
+        "suggestion": "Flatten conditionals and extract nested branches into helper methods.",
+        "metric_value": 6,
+        "metric_threshold": 4
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 24,
+        "message": "Magic number 0 used in method '__init__'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 24,
+        "message": "Magic number 0 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 20,
+        "message": "Magic number 0 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 87,
+        "message": "Magic number 0 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 39,
+        "message": "Magic number 0 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 53,
+        "message": "Magic number 2 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 2,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 55,
+        "message": "Magic number 10 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 10,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 56,
+        "message": "Magic number 0.2 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0.2,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 67,
+        "message": "Magic number 10000 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 10000,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 76,
+        "message": "Magic number 1000 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 1000,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 77,
+        "message": "Magic number 50 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 50,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 49,
+        "message": "Magic number 3 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 3,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 57,
+        "message": "Magic number 5 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 5,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 58,
+        "message": "Magic number 0.1 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0.1,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 68,
+        "message": "Magic number 0.2 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0.2,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 69,
+        "message": "Magic number 5000 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 5000,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 78,
+        "message": "Magic number 5000 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 5000,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 79,
+        "message": "Magic number 25 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 25,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 81,
+        "message": "Magic number 0 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 85,
+        "message": "Magic number 1 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 1,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 59,
+        "message": "Magic number 3 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 3,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 60,
+        "message": "Magic number 0.05 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0.05,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 62,
+        "message": "Magic number 0 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 70,
+        "message": "Magic number 0.19 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0.19,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 72,
+        "message": "Magic number 0.18 used in method 'create_order'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0.18,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "calculate_special_price",
+        "line_number": 124,
+        "message": "Magic number 10000 used in method 'calculate_special_price'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 10000,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "calculate_special_price",
+        "line_number": 125,
+        "message": "Magic number 0.8 used in method 'calculate_special_price'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0.8,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "calculate_special_price",
+        "line_number": 126,
+        "message": "Magic number 5000 used in method 'calculate_special_price'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 5000,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "calculate_special_price",
+        "line_number": 127,
+        "message": "Magic number 0.9 used in method 'calculate_special_price'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0.9,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 7,
+        "message": "Magic number 0 used in method 'pay'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 0,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 13,
+        "message": "Magic number 100000 used in method 'pay'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 100000,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 21,
+        "message": "Magic number 200 used in method 'pay'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 200,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 23,
+        "message": "Magic number 201 used in method 'pay'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 201,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 35,
+        "message": "Magic number 50000 used in method 'pay'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 50000,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 41,
+        "message": "Magic number 200 used in method 'pay'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 200,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 25,
+        "message": "Magic number 400 used in method 'pay'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 400,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 47,
+        "message": "Magic number 10000 used in method 'pay'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 10000,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "PaymentProcessor",
+        "file_path": "",
+        "method_name": "pay",
+        "line_number": 27,
+        "message": "Magic number 401 used in method 'pay'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 401,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "ProductManager",
+        "file_path": "",
+        "method_name": "update_stock",
+        "line_number": 18,
+        "message": "Magic number 3 used in method 'update_stock'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 3,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "UserManager",
+        "file_path": "",
+        "method_name": "login",
+        "line_number": 19,
+        "message": "Magic number 3 used in method 'login'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 3,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "UserManager",
+        "file_path": "",
+        "method_name": "unused_method",
+        "line_number": 30,
+        "message": "Magic number 10 used in method 'unused_method'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 10,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "UserManager",
+        "file_path": "",
+        "method_name": "unused_method",
+        "line_number": 31,
+        "message": "Magic number 20 used in method 'unused_method'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 20,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'address' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'age' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'city' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'country' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'email' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'extra1' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'extra2' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'extra3' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'gender' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'name' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'phone' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'state' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "LegacyCustomer",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 19,
+        "message": "Variable 'zipcode' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "HardcodedCredentials",
+        "severity": "critical",
+        "class_name": "UserManager",
+        "file_path": "",
+        "method_name": "reset_password",
+        "line_number": 25,
+        "message": "Hardcoded credential or secret detected.",
+        "suggestion": "Move configuration to environment variables or a secure configuration provider.",
+        "metric_value": 1,
+        "metric_threshold": 0
+      },
+      {
+        "rule": "StringConcatenationInLoop",
+        "severity": "medium",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "create_order",
+        "line_number": 74,
+        "message": "String concatenation inside a loop detected in 'create_order'.",
+        "suggestion": "Use list accumulation or join() to avoid quadratic string growth.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "DeadMethod",
+        "severity": "low",
+        "class_name": "OrderManager",
+        "file_path": "",
+        "method_name": "legacy_order_method",
+        "line_number": 131,
+        "message": "Method 'legacy_order_method' appears to be dead or legacy code.",
+        "suggestion": "Remove the method or replace it with a tested path.",
+        "metric_value": null,
+        "metric_threshold": null
+      },
+      {
+        "rule": "DeadMethod",
+        "severity": "low",
+        "class_name": "UserManager",
+        "file_path": "",
+        "method_name": "unused_method",
+        "line_number": 28,
+        "message": "Method 'unused_method' appears to be dead or legacy code.",
+        "suggestion": "Remove the method or replace it with a tested path.",
+        "metric_value": null,
+        "metric_threshold": null
+      }
+    ],
+    "total_score": 106,
+    "severity_counts": {
+      "high": 5,
+      "medium": 3,
+      "low": 57,
+      "critical": 1
+    },
+    "rule_counts": {
+      "LongMethod": 2,
+      "HighCyclomaticComplexity": 3,
+      "DeepNesting": 2,
+      "MagicNumber": 42,
+      "UnusedVariable": 13,
+      "HardcodedCredentials": 1,
+      "StringConcatenationInLoop": 1,
+      "DeadMethod": 2
+    },
+    "top_offenders": [
+      {
+        "class_name": "OrderManager",
+        "score": 47,
+        "issue_count": 33
+      },
+      {
+        "class_name": "PaymentProcessor",
+        "score": 27,
+        "issue_count": 12
+      },
+      {
+        "class_name": "UserManager",
+        "score": 17,
+        "issue_count": 6
+      },
+      {
+        "class_name": "LegacyCustomer",
+        "score": 14,
+        "issue_count": 14
+      },
+      {
+        "class_name": "ProductManager",
+        "score": 1,
+        "issue_count": 1
+      }
+    ]
+  },
+  "dependency_report": {
+    "build_tool": "unknown",
+    "project_path": "C:\\mini pro\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\uploads\\temp\\tmp7segbzc3\\python_technical_debt_sample",
+    "dependencies": [],
+    "plugins": [],
+    "detected_frameworks": [],
+    "outdated_dependencies": [],
+    "warnings": [
+      "No pom.xml or build.gradle(.kts) found in project."
+    ]
+  }
+}

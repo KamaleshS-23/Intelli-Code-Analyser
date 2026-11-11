@@ -1,0 +1,24 @@
+.legacy-page main section article div span {
+  color: #bd2430 !important;
+  margin: 1rem !important;
+}
+
+.legacy-page h1 {
+  color: rgb(34, 76, 120) !important;
+}
+
+.legacy-page h1 {
+  border-color: #0a0 !important;
+}
+
+.legacy-page p {
+  background: #ffeecc !important;
+}
+
+.legacy-page button {
+  outline-color: #456 !important;
+}
+
+.legacy-unused-selector {
+  color: #abc;
+}

@@ -1,0 +1,3478 @@
+{
+  "project_name": "SamplePythonProject_20261103_144708_914285",
+  "project_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285",
+  "classes": [
+    {
+      "name": "BadService",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285\\app\\bad_service.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "process",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "items",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 4,
+          "line_count": 10,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "login",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "username",
+              "datatype": "object"
+            },
+            {
+              "name": "password",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 15,
+          "line_count": 13,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 2,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [
+            {
+              "name": "api_key",
+              "line": 15
+            }
+          ],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": [
+            {
+              "line": 16,
+              "value": "Authenticate a user with the provided credentials.\n\n        Args:\n            username (str): The user's identifier.\n            password (str): The user's secret password.\n\n        Returns:\n            bool: True if authentication is successful, False otherwise.\n        "
+            },
+            {
+              "line": 25,
+              "value": "API_KEY"
+            },
+            {
+              "line": 26,
+              "value": "APP_SERVICE_PASSWORD"
+            }
+          ]
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 27,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "OrderConfig",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285\\app\\big_service.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [
+        {
+          "name": "customer_id",
+          "datatype": "Optional",
+          "modifiers": [],
+          "line_number": 8
+        },
+        {
+          "name": "strategy",
+          "datatype": "Optional",
+          "modifiers": [],
+          "line_number": 9
+        }
+      ],
+      "methods": [],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 55,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "PaymentGateway",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285\\app\\big_service.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "__init__",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "config",
+              "datatype": "OrderConfig"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 20,
+          "line_count": 3,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [
+            {
+              "name": "password",
+              "line": 20
+            }
+          ],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": [
+            {
+              "line": 22,
+              "value": "PAYMENT_GATEWAY_PASSWORD"
+            }
+          ]
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 55,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "BigService",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285\\app\\big_service.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "__init__",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "config",
+              "datatype": "OrderConfig"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 33,
+          "line_count": 2,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "authorize",
+          "return_type": "bool",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "order_id",
+              "datatype": "str"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 36,
+          "line_count": 11,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "process_orders",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "orders",
+              "datatype": "list"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 48,
+          "line_count": 8,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 55,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "RecordCRUD",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285\\app\\design_examples.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "create",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 2,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "read",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 3,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "update",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 4,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "delete",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 5,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 54,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "RecordProcessing",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285\\app\\design_examples.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "validate",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 8,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "normalize",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 9,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "authorize",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 10,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "notify",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 11,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "archive",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 12,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "restore",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 13,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 54,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "RecordManagement",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285\\app\\design_examples.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "export",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 16,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "import_data",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 17,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "search",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 18,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "filter",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 19,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "sort",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 20,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "summarize",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 21,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "reconcile",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 22,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "publish",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 23,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "retry",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 24,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "schedule",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 25,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "cleanup",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 26,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 54,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "TaskLayerFour",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285\\app\\design_examples.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "__init__",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "crud",
+              "datatype": "object"
+            },
+            {
+              "name": "processing",
+              "datatype": "object"
+            },
+            {
+              "name": "management",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 29,
+          "line_count": 4,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 4,
+          "max_nesting_depth": 1,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "create",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 34,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "read",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 35,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "update",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 36,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "delete",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 37,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "validate",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 38,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "normalize",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 39,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "authorize",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 40,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "notify",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 41,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "archive",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 42,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "restore",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 43,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "export",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 44,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "import_data",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 45,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "search",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 46,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "filter",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 47,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "sort",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 48,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "summarize",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 49,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "reconcile",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 50,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "publish",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 51,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "retry",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 52,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "schedule",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 53,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "cleanup",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 54,
+          "line_count": 1,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 54,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "LegacySupport",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285\\app\\legacy_support.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "run_report",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "rows",
+              "datatype": "object"
+            },
+            {
+              "name": "flags",
+              "datatype": "object"
+            },
+            {
+              "name": "config",
+              "datatype": "object"
+            },
+            {
+              "name": "debug",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 6,
+          "line_count": 33,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 7,
+          "max_nesting_depth": 5,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "line": 20,
+              "value": 0
+            },
+            {
+              "line": 32,
+              "value": 0
+            },
+            {
+              "line": 25,
+              "value": 7
+            },
+            {
+              "line": 25,
+              "value": 5
+            },
+            {
+              "line": 29,
+              "value": 3
+            },
+            {
+              "line": 26,
+              "value": 0
+            },
+            {
+              "line": 29,
+              "value": 0
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        },
+        {
+          "name": "_calculate_matrix_total",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "config",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 40,
+          "line_count": 11,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 10,
+          "max_nesting_depth": 5,
+          "empty_catch_lines": [],
+          "magic_numbers": [
+            {
+              "line": 41,
+              "value": 0
+            },
+            {
+              "line": 43,
+              "value": 2
+            },
+            {
+              "line": 45,
+              "value": 1
+            },
+            {
+              "line": 45,
+              "value": 11
+            },
+            {
+              "line": 43,
+              "value": 3
+            },
+            {
+              "line": 43,
+              "value": 1
+            },
+            {
+              "line": 46,
+              "value": 1
+            },
+            {
+              "line": 46,
+              "value": 6
+            },
+            {
+              "line": 47,
+              "value": 1
+            },
+            {
+              "line": 47,
+              "value": 4
+            },
+            {
+              "line": 48,
+              "value": 10
+            }
+          ],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 48,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 67,
+      "mutable_static_fields": []
+    },
+    {
+      "name": "MaintenanceHelper",
+      "package": "app",
+      "file_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285\\app\\legacy_support.py",
+      "class_type": "class",
+      "modifiers": [
+        "public"
+      ],
+      "imports": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "cleanup",
+          "return_type": "None",
+          "parameters": [
+            {
+              "name": "self",
+              "datatype": "object"
+            },
+            {
+              "name": "data",
+              "datatype": "object"
+            }
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "line_number": 57,
+          "line_count": 11,
+          "is_constructor": false,
+          "non_blank_lines": 0,
+          "body_hash": "",
+          "cyclomatic_complexity": 1,
+          "max_nesting_depth": 0,
+          "empty_catch_lines": [],
+          "magic_numbers": [],
+          "unused_local_vars": [],
+          "string_concat_in_loop_line": 0,
+          "unclosed_resource_lines": [],
+          "catches_generic_exception_line": 0,
+          "method_calls": [],
+          "external_type_accesses": {},
+          "parameter_type_accesses": {},
+          "has_javadoc": true,
+          "hardcoded_credential_lines": []
+        }
+      ],
+      "extends": "",
+      "implements": [],
+      "annotations": [],
+      "line_count": 67,
+      "mutable_static_fields": []
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "app.PaymentGateway",
+      "to": "app.OrderConfig",
+      "type": "parameter"
+    },
+    {
+      "from": "app.BigService",
+      "to": "app.OrderConfig",
+      "type": "parameter"
+    }
+  ],
+  "errors": [],
+  "statistics": {
+    "stack": "python",
+    "language": "python",
+    "languages": [
+      "python"
+    ],
+    "total_files": 8,
+    "parsed_files": 8,
+    "failed_files": 0,
+    "total_classes": 10,
+    "total_interfaces": 0,
+    "total_enums": 0,
+    "total_methods": 52,
+    "total_fields": 2,
+    "dependency_edges": 2,
+    "circular_dependencies": 0,
+    "scan_time_seconds": 0.034,
+    "graph": {
+      "node_count": 10,
+      "edge_count": 2,
+      "coupling_metrics": {
+        "app.BadService": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "app.OrderConfig": {
+          "afferent_coupling": 2,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "app.PaymentGateway": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 1,
+          "instability": 1.0
+        },
+        "app.BigService": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 1,
+          "instability": 1.0
+        },
+        "app.RecordCRUD": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "app.RecordProcessing": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "app.RecordManagement": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "app.TaskLayerFour": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "app.LegacySupport": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        },
+        "app.MaintenanceHelper": {
+          "afferent_coupling": 0,
+          "efferent_coupling": 0,
+          "instability": 0.0
+        }
+      },
+      "circular_dependencies": []
+    }
+  },
+  "debt_report": {
+    "project_name": "SamplePythonProject_20261103_144708_914285",
+    "issues": [
+      {
+        "rule": "LongMethod",
+        "severity": "medium",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "run_report",
+        "line_number": 6,
+        "message": "Method 'run_report' is too long (33 lines).",
+        "suggestion": "Refactor into smaller helper methods or split responsibilities.",
+        "metric_value": 33,
+        "metric_threshold": 25,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "HighCyclomaticComplexity",
+        "severity": "medium",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "_calculate_matrix_total",
+        "line_number": 40,
+        "message": "Method '_calculate_matrix_total' has cyclomatic complexity 10.",
+        "suggestion": "Reduce branching and extract decision logic into dedicated functions.",
+        "metric_value": 10,
+        "metric_threshold": 8,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "DeepNesting",
+        "severity": "medium",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "run_report",
+        "line_number": 6,
+        "message": "Method 'run_report' nests logic too deeply (5).",
+        "suggestion": "Flatten conditionals and extract nested branches into helper methods.",
+        "metric_value": 5,
+        "metric_threshold": 4,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "DeepNesting",
+        "severity": "medium",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "_calculate_matrix_total",
+        "line_number": 40,
+        "message": "Method '_calculate_matrix_total' nests logic too deeply (5).",
+        "suggestion": "Flatten conditionals and extract nested branches into helper methods.",
+        "metric_value": 5,
+        "metric_threshold": 4,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "run_report",
+        "line_number": 25,
+        "message": "Magic number 7 used in method 'run_report'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 7,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "run_report",
+        "line_number": 25,
+        "message": "Magic number 5 used in method 'run_report'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 5,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "run_report",
+        "line_number": 29,
+        "message": "Magic number 3 used in method 'run_report'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "_calculate_matrix_total",
+        "line_number": 45,
+        "message": "Magic number 11 used in method '_calculate_matrix_total'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 11,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "_calculate_matrix_total",
+        "line_number": 43,
+        "message": "Magic number 3 used in method '_calculate_matrix_total'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 3,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "_calculate_matrix_total",
+        "line_number": 46,
+        "message": "Magic number 6 used in method '_calculate_matrix_total'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 6,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "_calculate_matrix_total",
+        "line_number": 47,
+        "message": "Magic number 4 used in method '_calculate_matrix_total'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 4,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MagicNumber",
+        "severity": "low",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "_calculate_matrix_total",
+        "line_number": 48,
+        "message": "Magic number 10 used in method '_calculate_matrix_total'.",
+        "suggestion": "Replace numeric literals with named constants or enums.",
+        "metric_value": 10,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "app.BadService",
+        "file_path": "",
+        "method_name": "login",
+        "line_number": 15,
+        "message": "Variable 'api_key' is assigned but never used in 'login'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "UnusedVariable",
+        "severity": "low",
+        "class_name": "app.PaymentGateway",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 20,
+        "message": "Variable 'password' is assigned but never used in '__init__'.",
+        "suggestion": "Remove the unused variable or use it to simplify the logic.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "HardcodedCredentials",
+        "severity": "critical",
+        "class_name": "app.BadService",
+        "file_path": "",
+        "method_name": "login",
+        "line_number": 16,
+        "message": "Hardcoded credential or secret detected.",
+        "suggestion": "Move configuration to environment variables or a secure configuration provider.",
+        "metric_value": 1,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "HardcodedCredentials",
+        "severity": "critical",
+        "class_name": "app.BadService",
+        "file_path": "",
+        "method_name": "login",
+        "line_number": 25,
+        "message": "Hardcoded credential or secret detected.",
+        "suggestion": "Move configuration to environment variables or a secure configuration provider.",
+        "metric_value": 1,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "HardcodedCredentials",
+        "severity": "critical",
+        "class_name": "app.BadService",
+        "file_path": "",
+        "method_name": "login",
+        "line_number": 26,
+        "message": "Hardcoded credential or secret detected.",
+        "suggestion": "Move configuration to environment variables or a secure configuration provider.",
+        "metric_value": 1,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "HardcodedCredentials",
+        "severity": "critical",
+        "class_name": "app.PaymentGateway",
+        "file_path": "",
+        "method_name": "__init__",
+        "line_number": 22,
+        "message": "Hardcoded credential or secret detected.",
+        "suggestion": "Move configuration to environment variables or a secure configuration provider.",
+        "metric_value": 1,
+        "metric_threshold": 0,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "StringConcatenationInLoop",
+        "severity": "medium",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "_calculate_matrix_total",
+        "line_number": 48,
+        "message": "String concatenation inside a loop detected in '_calculate_matrix_total'.",
+        "suggestion": "Use list accumulation or join() to avoid quadratic string growth.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "PossibleRefactorIssue",
+        "severity": "high",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "run_report",
+        "line_number": 6,
+        "message": "Method 'run_report' is a likely refactoring candidate: long method (33 lines), too many parameters (5), deep nesting (5).",
+        "suggestion": "Extract helper methods, reduce branching, and split responsibilities to make the logic easier to maintain.",
+        "metric_value": 33,
+        "metric_threshold": 10,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "PossibleRefactorIssue",
+        "severity": "medium",
+        "class_name": "app.LegacySupport",
+        "file_path": "",
+        "method_name": "_calculate_matrix_total",
+        "line_number": 40,
+        "message": "Method '_calculate_matrix_total' is a likely refactoring candidate: high complexity (10), deep nesting (5).",
+        "suggestion": "Extract helper methods, reduce branching, and split responsibilities to make the logic easier to maintain.",
+        "metric_value": 11,
+        "metric_threshold": 10,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "BadService",
+        "file_path": "app\\bad_service.py",
+        "method_name": null,
+        "line_number": 3,
+        "message": "Public class 'BadService' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "OrderConfig",
+        "file_path": "app\\big_service.py",
+        "method_name": null,
+        "line_number": 7,
+        "message": "Public class 'OrderConfig' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "RecordCRUD",
+        "file_path": "app\\design_examples.py",
+        "method_name": null,
+        "line_number": 1,
+        "message": "Public class 'RecordCRUD' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "RecordProcessing",
+        "file_path": "app\\design_examples.py",
+        "method_name": null,
+        "line_number": 7,
+        "message": "Public class 'RecordProcessing' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "RecordManagement",
+        "file_path": "app\\design_examples.py",
+        "method_name": null,
+        "line_number": 15,
+        "message": "Public class 'RecordManagement' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": null,
+        "line_number": 28,
+        "message": "Public class 'TaskLayerFour' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "create",
+        "line_number": 34,
+        "message": "Public function 'create' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "read",
+        "line_number": 35,
+        "message": "Public function 'read' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "update",
+        "line_number": 36,
+        "message": "Public function 'update' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "delete",
+        "line_number": 37,
+        "message": "Public function 'delete' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "validate",
+        "line_number": 38,
+        "message": "Public function 'validate' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "normalize",
+        "line_number": 39,
+        "message": "Public function 'normalize' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "authorize",
+        "line_number": 40,
+        "message": "Public function 'authorize' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "notify",
+        "line_number": 41,
+        "message": "Public function 'notify' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "archive",
+        "line_number": 42,
+        "message": "Public function 'archive' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "restore",
+        "line_number": 43,
+        "message": "Public function 'restore' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "export",
+        "line_number": 44,
+        "message": "Public function 'export' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "import_data",
+        "line_number": 45,
+        "message": "Public function 'import_data' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "search",
+        "line_number": 46,
+        "message": "Public function 'search' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "filter",
+        "line_number": 47,
+        "message": "Public function 'filter' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "sort",
+        "line_number": 48,
+        "message": "Public function 'sort' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "summarize",
+        "line_number": 49,
+        "message": "Public function 'summarize' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "reconcile",
+        "line_number": 50,
+        "message": "Public function 'reconcile' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "publish",
+        "line_number": 51,
+        "message": "Public function 'publish' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "retry",
+        "line_number": 52,
+        "message": "Public function 'retry' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "schedule",
+        "line_number": 53,
+        "message": "Public function 'schedule' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": "cleanup",
+        "line_number": 54,
+        "message": "Public function 'cleanup' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "MissingDocstring",
+        "severity": "low",
+        "class_name": "app\\rule_examples.py",
+        "file_path": "app\\rule_examples.py",
+        "method_name": "process_items",
+        "line_number": 1,
+        "message": "Public function 'process_items' has no docstring.",
+        "suggestion": "Add a concise docstring describing purpose, inputs, and behavior.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "LargeClass",
+        "severity": "high",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": null,
+        "line_number": 28,
+        "message": "Class 'TaskLayerFour' has 22 methods (limit 20).",
+        "suggestion": "Split independent responsibilities into focused collaborating classes.",
+        "metric_value": 22,
+        "metric_threshold": 20,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "FeatureEnvy",
+        "severity": "medium",
+        "class_name": "LegacySupport",
+        "file_path": "app\\legacy_support.py",
+        "method_name": "run_report",
+        "line_number": 6,
+        "message": "Method 'run_report' accesses other objects substantially more than its own state.",
+        "suggestion": "Consider moving cohesive behavior closer to the data it primarily uses.",
+        "metric_value": 9,
+        "metric_threshold": 2,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "HighCoupling",
+        "severity": "high",
+        "class_name": "TaskLayerFour",
+        "file_path": "app\\design_examples.py",
+        "method_name": null,
+        "line_number": 28,
+        "message": "Class 'TaskLayerFour' references 24 distinct dependencies.",
+        "suggestion": "Reduce direct dependencies and inject focused interfaces where practical.",
+        "metric_value": 24,
+        "metric_threshold": 10,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      },
+      {
+        "rule": "CircularDependency",
+        "severity": "high",
+        "class_name": "app.cycle_b",
+        "file_path": "app\\cycle_b.py",
+        "method_name": null,
+        "line_number": 1,
+        "message": "Python import cycle detected: app.cycle_a -> app.cycle_b -> app.cycle_a.",
+        "suggestion": "Move shared definitions into a lower-level module to break the cycle.",
+        "metric_value": null,
+        "metric_threshold": null,
+        "rule_id": "",
+        "category": "",
+        "language": "",
+        "column": 0,
+        "code_snippet": "",
+        "refactoring_pattern": "",
+        "estimated_fix_minutes": 0,
+        "threshold": null,
+        "layer": "",
+        "django_version_aware": false,
+        "node_version_aware": false,
+        "framework": null
+      }
+    ],
+    "total_score": 123,
+    "severity_counts": {
+      "medium": 7,
+      "low": 38,
+      "critical": 4,
+      "high": 4
+    },
+    "rule_counts": {
+      "LongMethod": 1,
+      "HighCyclomaticComplexity": 1,
+      "DeepNesting": 2,
+      "MagicNumber": 8,
+      "UnusedVariable": 2,
+      "HardcodedCredentials": 4,
+      "StringConcatenationInLoop": 1,
+      "PossibleRefactorIssue": 2,
+      "MissingDocstring": 28,
+      "LargeClass": 1,
+      "FeatureEnvy": 1,
+      "HighCoupling": 1,
+      "CircularDependency": 1
+    },
+    "top_offenders": [
+      {
+        "class_name": "TaskLayerFour",
+        "score": 34,
+        "issue_count": 24
+      },
+      {
+        "class_name": "app.LegacySupport",
+        "score": 32,
+        "issue_count": 15
+      },
+      {
+        "class_name": "app.BadService",
+        "score": 31,
+        "issue_count": 4
+      },
+      {
+        "class_name": "app.PaymentGateway",
+        "score": 11,
+        "issue_count": 2
+      },
+      {
+        "class_name": "app.cycle_b",
+        "score": 6,
+        "issue_count": 1
+      },
+      {
+        "class_name": "LegacySupport",
+        "score": 3,
+        "issue_count": 1
+      },
+      {
+        "class_name": "BadService",
+        "score": 1,
+        "issue_count": 1
+      },
+      {
+        "class_name": "OrderConfig",
+        "score": 1,
+        "issue_count": 1
+      },
+      {
+        "class_name": "RecordCRUD",
+        "score": 1,
+        "issue_count": 1
+      },
+      {
+        "class_name": "RecordProcessing",
+        "score": 1,
+        "issue_count": 1
+      }
+    ]
+  },
+  "dependency_report": {
+    "build_tool": "unknown",
+    "project_path": "K:\\PROJECTS\\MINI PROJECT\\original_mini_project(technical_debt)\\original mini project\\AI-Technical-Debt-Agent\\backend\\scanner\\output\\optimized\\SamplePythonProject_20261103_144708_914285",
+    "dependencies": [],
+    "plugins": [],
+    "detected_frameworks": [],
+    "outdated_dependencies": [],
+    "warnings": [
+      "No pom.xml or build.gradle(.kts) found in project."
+    ]
+  }
+}

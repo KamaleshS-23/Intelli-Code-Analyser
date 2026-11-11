@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small accessible task dashboard for demonstrating web-stack analysis.">
+  <title>Focus Board</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#main">Focus Board</a>
+    <nav aria-label="Main navigation">
+      <a href="#tasks">Tasks</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">A practical sample application</p>
+      <h1 id="page-title">Make room for focused work.</h1>
+      <p>Capture a small task, then mark it complete when you are done.</p>
+    </section>
+
+    <section id="tasks" class="task-panel" aria-labelledby="tasks-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Your workspace</p>
+          <h2 id="tasks-title">Today's tasks</h2>
+        </div>
+        <span class="task-count" id="task-count" aria-live="polite">2 tasks</span>
+      </div>
+      <form id="task-form" class="task-form">
+        <label class="visually-hidden" for="task-input">New task</label>
+        <input id="task-input" name="task" type="text" maxlength="100"
+               placeholder="Add a task" required>
+        <button type="submit">Add task</button>
+      </form>
+      <ul class="task-list" id="task-list">
+        <li><span>Review the project structure</span><button type="button" class="complete-task">Complete</button></li>
+        <li><span>Check the responsive layout</span><button type="button" class="complete-task">Complete</button></li>
+      </ul>
+    </section>
+
+    <section id="about" class="about-panel" aria-labelledby="about-title">
+      <h2 id="about-title">Built for clarity</h2>
+      <p>This semantic, keyboard-friendly page is paired with separate legacy examples for analyzer demonstrations.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Focus Board · Web stack sample</p>
+  </footer>
+</body>
+</html>

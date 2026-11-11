@@ -11,29 +11,50 @@ Given the ProjectModel produced by Phase 1's ProjectScanner, this:
   3. Scores the combined issues into a DebtReport
 """
 
+from pathlib import Path
+
 from debt_analyzer.rules.base_rule import AnalysisContext
-from debt_analyzer.rules.long_method import LongMethodRule
-from debt_analyzer.rules.excessive_parameter_list import ExcessiveParameterListRule
-from debt_analyzer.rules.god_class import GodClassRule
-from debt_analyzer.rules.large_class import LargeClassRule
-from debt_analyzer.rules.high_coupling import HighCouplingRule
-from debt_analyzer.rules.deep_inheritance import DeepInheritanceRule
-from debt_analyzer.rules.duplicate_code import DuplicateCodeRule
-from debt_analyzer.rules.unused_variable import UnusedVariableRule
-from debt_analyzer.rules.dead_method import DeadMethodRule
-from debt_analyzer.rules.high_cyclomatic_complexity import HighCyclomaticComplexityRule
-from debt_analyzer.rules.deep_nesting import DeepNestingRule
-from debt_analyzer.rules.empty_catch_block import EmptyCatchBlockRule
-from debt_analyzer.rules.magic_number import MagicNumberRule
-from debt_analyzer.rules.hardcoded_credentials import HardcodedCredentialsRule
-from debt_analyzer.rules.feature_envy import FeatureEnvyRule
-from debt_analyzer.rules.circular_dependency import CircularDependencyRule
-from debt_analyzer.rules.string_concatenation_in_loop import StringConcatenationInLoopRule
-from debt_analyzer.rules.unclosed_resource import UnclosedResourceRule
-from debt_analyzer.rules.mutable_static_field import MutableStaticFieldRule
-from debt_analyzer.rules.generic_exception_handling import GenericExceptionHandlingRule
-from debt_analyzer.rules.missing_javadoc import MissingJavadocRule
+from debt_analyzer.rules.java.java_rules import (
+    LongMethodRule,
+    ExcessiveParameterListRule,
+    GodClassRule,
+    LargeClassRule,
+    HighCouplingRule,
+    DeepInheritanceRule,
+    DuplicateCodeRule,
+    UnusedVariableRule,
+    DeadMethodRule,
+    HighCyclomaticComplexityRule,
+    DeepNestingRule,
+    EmptyCatchBlockRule,
+    MagicNumberRule,
+    HardcodedCredentialsRule,
+    FeatureEnvyRule,
+    CircularDependencyRule,
+    StringConcatenationInLoopRule,
+    UnclosedResourceRule,
+    MutableStaticFieldRule,
+    GenericExceptionHandlingRule,
+    MissingJavadocRule,
+)
+from debt_analyzer.rules.python.python_rules import (
+    PythonLongMethodRule,
+    PythonHighCyclomaticComplexityRule,
+    PythonDeepNestingRule,
+    PythonMagicNumberRule,
+    PythonUnusedVariableRule,
+    PythonHardcodedCredentialsRule,
+    PythonGenericExceptionHandlingRule,
+    PythonStringConcatenationInLoopRule,
+    PythonDeadMethodRule,
+    PythonPossibleRefactorIssueRule,
+)
+from debt_analyzer.rules.python.ast_rules import PYTHON_AST_RULES
+from debt_analyzer.rules.stack_rules import get_web_stack_rules
+from debt_analyzer.rules.django import DjangoProjectAnalysisRule
+from debt_analyzer.rules.nodejs import NodeProjectAnalysisRule
 from debt_analyzer.scoring import score_report
+from debt_analyzer.web_metrics import update_web_summary
 from scanner.utils.logger import logger
 
 
@@ -60,6 +81,37 @@ DEFAULT_RULES = [
     GenericExceptionHandlingRule(),
     MissingJavadocRule(),
 ]
+
+PYTHON_RULES = [
+    PythonLongMethodRule(),
+    PythonHighCyclomaticComplexityRule(),
+    PythonDeepNestingRule(),
+    PythonMagicNumberRule(),
+    PythonUnusedVariableRule(),
+    PythonHardcodedCredentialsRule(),
+    PythonGenericExceptionHandlingRule(),
+    PythonStringConcatenationInLoopRule(),
+    PythonDeadMethodRule(),
+    PythonPossibleRefactorIssueRule(),
+] + PYTHON_AST_RULES
+
+DJANGO_RULES = PYTHON_RULES + get_web_stack_rules("django") + [
+    DjangoProjectAnalysisRule()
+]
+WEB_RULES = get_web_stack_rules("web")
+NODEJS_RULES = get_web_stack_rules("nodejs") + [
+    NodeProjectAnalysisRule()
+]
+
+
+def get_rules_for_stack(stack="java"):
+    normalized = (stack or "java").lower()
+    return {
+        "python": PYTHON_RULES,
+        "web": WEB_RULES,
+        "django": DJANGO_RULES,
+        "nodejs": NODEJS_RULES,
+    }.get(normalized, DEFAULT_RULES)
 
 
 def _compute_inheritance_depth(project):
@@ -92,8 +144,9 @@ def _compute_inheritance_depth(project):
 
 
 class DebtEngine:
-    def __init__(self, rules=None):
-        self.rules = rules if rules is not None else DEFAULT_RULES
+    def __init__(self, rules=None, stack="java"):
+        self.stack = (stack or "java").lower()
+        self.rules = rules if rules is not None else get_rules_for_stack(self.stack)
 
     def analyze(self, project):
         coupling_metrics = (
@@ -112,6 +165,15 @@ class DebtEngine:
             rule_issues = rule.analyze(context)
             logger.info(f"{rule.name}: {len(rule_issues)} issue(s) found")
             all_issues.extend(rule_issues)
+
+        web_analysis = project.statistics.get("web_analysis")
+        if web_analysis:
+            web_extensions = {".html", ".htm", ".css", ".js", ".jsx", ".mjs", ".cjs"}
+            web_issues = [
+                issue for issue in all_issues
+                if Path(issue.file_path).suffix.lower() in web_extensions
+            ]
+            update_web_summary(web_analysis, web_issues)
 
         report = score_report(project.project_name, all_issues)
         logger.info(

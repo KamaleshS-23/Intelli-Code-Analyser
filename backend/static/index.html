@@ -11,8 +11,10 @@
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="text/javascript" src="/static/vis-network.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/style.css?v=comparison-report-v2">
 </head>
 <body>
     <div class="glass-bg"></div>
@@ -20,52 +22,28 @@
     <header class="app-header">
         <div class="logo">
             <i class="fa-solid fa-microchip-ai logo-icon"></i>
-            <span>Technical <span class="accent-text">Debt Agent</span></span>
+            <span><span class="accent-text">Intelli Code Analyzer</span></span>
         </div>
-        <div class="server-status">
-            <span class="status-dot online"></span>
-            <span class="status-text">Server Active</span>
+        <div class="header-actions">
+            <button class="account-button" id="btn-signin" type="button">
+                <i class="fa-solid fa-circle-user"></i>
+                <span>Sign in</span>
+            </button>
+            <div class="user-chip hidden" id="user-chip">
+                <span class="user-avatar" id="user-avatar" aria-label="Signed-in user">?</span>
+                <button class="btn-header" id="btn-history" type="button">
+                    <i class="fa-solid fa-clock-rotate-left"></i> History
+                </button>
+                <button class="btn-header" id="btn-logout" type="button">Logout</button>
+            </div>
+            <div class="server-status">
+                <span class="status-dot online"></span>
+                <span class="status-text">Server Active</span>
+            </div>
         </div>
     </header>
 
     <main class="dashboard-container">
-        <!-- Input & Controls Section -->
-        <section class="control-panel">
-            <div class="glass-card upload-card">
-                <h2><i class="fa-solid fa-file-zip"></i> Upload Project</h2>
-                <p class="subtitle">Upload a ZIP file of your Java/Maven/Gradle project</p>
-                <div class="drag-drop-zone" id="drop-zone">
-                    <input type="file" id="file-input" accept=".zip" class="file-input">
-                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
-                    <p class="drag-text">Drag & drop project ZIP here, or <span class="browse-link">browse</span></p>
-                    <p class="file-info" id="file-info"></p>
-                </div>
-                <button class="btn btn-primary" id="btn-upload" disabled>
-                    <i class="fa-solid fa-rocket"></i> Run Uploaded Scan
-                </button>
-            </div>
-
-            <div class="glass-card path-card">
-                <h2><i class="fa-solid fa-folder-open"></i> Scan Local Path</h2>
-                <p class="subtitle">Scan an absolute path on this system</p>
-                <div class="input-group">
-                    <i class="fa-solid fa-terminal path-icon"></i>
-                    <input type="text" id="path-input" placeholder="e.g. C:\Projects\MyJavaProject" class="text-input">
-                </div>
-                <button class="btn btn-secondary" id="btn-scan-path">
-                    <i class="fa-solid fa-magnifying-glass"></i> Analyze Local Folder
-                </button>
-
-                <div class="divider"><span>OR</span></div>
-
-                <div class="sample-actions">
-                    <button class="btn btn-glow" id="btn-sample-scan">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> Run Built-in Sample Project
-                    </button>
-                </div>
-            </div>
-        </section>
-
         <!-- Loader -->
         <div class="scanner-loader-container" id="scanner-loader">
             <div class="scanner-loader">
@@ -77,7 +55,8 @@
         </div>
 
         <!-- Scan Results Dashboard -->
-        <section class="results-panel hidden" id="results-panel">
+        <section class="results-panel" id="results-panel">
+            <div id="scan-results-content" class="hidden">
             <div class="results-header">
                 <div>
                     <h1 id="project-title">Project: SampleProject</h1>
@@ -108,7 +87,7 @@
                         <i class="fa-solid fa-file-code"></i>
                     </div>
                     <div class="stat-content">
-                        <h3>Classes & Interfaces</h3>
+                        <h3 id="stat-classes-label">Classes & Interfaces</h3>
                         <p class="stat-value" id="stat-classes-count">4</p>
                         <p class="stat-desc" id="stat-files-parsed">4 files parsed successfully</p>
                     </div>
@@ -139,23 +118,220 @@
                 </div>
             </div>
 
+            <div class="ai-assistant-widget" id="ai-assistant-widget">
+                <button class="ai-assistant-toggle" id="btn-ai-toggle" type="button" aria-expanded="false" aria-label="Open AI assistant">
+                    <i class="fa-solid fa-robot"></i>
+                </button>
+
+                <div class="glass-card ai-assistant-panel hidden" id="ai-assistant-panel">
+                    <div class="ai-resize-handle" id="ai-resize-handle" title="Drag flexible arrows to expand or shorten bot box">
+                        <i class="fa-solid fa-arrows-up-down-left-right"></i>
+                    </div>
+
+                    <div class="assistant-header">
+                        <div class="assistant-title-group">
+                            <h2><i class="fa-solid fa-robot"></i> AI Technical Debt Assistant</h2>
+                            <p class="assistant-subtitle">Explain debt, root-cause, graph relationships, refactor & validate diffs.</p>
+                        </div>
+                        <div class="assistant-controls">
+                            <button class="ai-header-btn" id="btn-ai-expand" type="button" title="Expand / Shorten Chatbox" aria-label="Expand or shorten bot box">
+                                <i class="fa-solid fa-up-right-and-down-left-from-center" id="ai-expand-icon"></i>
+                            </button>
+                            <button class="ai-close-btn" id="btn-ai-close" type="button" aria-label="Close assistant">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 5 Must-Have Core Feature Pills -->
+                    <div class="ai-feature-pills" id="ai-feature-pills">
+                        <button class="ai-pill active" data-mode="explain" type="button" title="1. Explain detected technical debt">
+                            <i class="fa-solid fa-magnifying-glass"></i> Explain
+                        </button>
+                        <button class="ai-pill" data-mode="root-cause" type="button" title="2. Root-cause analysis of debt & architecture">
+                            <i class="fa-solid fa-brain"></i> Root-Cause
+                        </button>
+                        <button class="ai-pill" data-mode="graph" type="button" title="3. Query dependency knowledge graph & coupling">
+                            <i class="fa-solid fa-diagram-project"></i> Graph
+                        </button>
+                        <button class="ai-pill" data-mode="refactor" type="button" title="4. Recommend and generate Java refactoring fixes">
+                            <i class="fa-solid fa-screwdriver-wrench"></i> Refactor
+                        </button>
+                        <button class="ai-pill" data-mode="validation" type="button" title="5. Before-after diff & build/test validation">
+                            <i class="fa-solid fa-circle-check"></i> Diff & Validation
+                        </button>
+                    </div>
+
+                    <div class="ai-chat-thread" id="ai-chat-thread">
+                        <div class="ai-message ai-message-bot">
+                            <div class="ai-bubble">
+                                Welcome! Select one of the <strong>5 AI capabilities</strong> above or type your question about debt findings, root causes, knowledge graph relationships, refactoring code, or before-after diff validation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ai-suggested-prompts" id="ai-suggested-prompts">
+                        <button class="prompt-chip" type="button" data-message="Explain the biggest technical-debt issues in this project and their severity.">🔍 Explain Top Debt</button>
+                        <button class="prompt-chip" type="button" data-message="Perform root-cause analysis: Why does UserService violate Single Responsibility?">🧠 Root Cause: UserService</button>
+                        <button class="prompt-chip" type="button" data-message="Query knowledge graph: What are the circular dependencies and class couplings?">🕸️ Knowledge Graph</button>
+                        <button class="prompt-chip" type="button" data-message="Refactor and generate clean Java code for UserService.processPayment to reduce complexity.">🛠️ Refactor Code</button>
+                        <button class="prompt-chip" type="button" data-message="Generate before-after diff and prove build/test validation for UserService.">✅ Diff & Validation</button>
+                    </div>
+
+                    <div class="ai-input-row">
+                        <input id="ai-message-input" type="text" class="text-input" placeholder="Ask about debt, root causes, graph, refactor, or diff..." />
+                        <button class="btn btn-primary" id="btn-ai-send" type="button">
+                            <i class="fa-solid fa-paper-plane"></i> Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+
             <!-- Tabbed Interface -->
             <div class="tab-container glass-card">
-                <nav class="tab-headers">
-                    <button class="tab-btn active" data-tab="tab-smells">
+                <nav class="tab-headers" aria-label="Dashboard sections">
+                    <button class="tab-btn active" data-tab="tab-home">
+                        <i class="fa-solid fa-house"></i> Home
+                    </button>
+                    <button class="tab-btn" data-tab="tab-upload">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> Upload Project
+                    </button>
+                    <button class="tab-btn" data-tab="tab-smells">
                         <i class="fa-solid fa-bug"></i> Code Smells
                     </button>
                     <button class="tab-btn" data-tab="tab-graph" id="btn-tab-graph">
                         <i class="fa-solid fa-diagram-project"></i> Dependency Graph
                     </button>
+                    <button class="tab-btn" data-tab="tab-knowledge" id="btn-tab-knowledge">
+                        <i class="fa-solid fa-share-nodes"></i> Code Knowledge Graph
+                    </button>
                     <button class="tab-btn" data-tab="tab-dependencies">
                         <i class="fa-solid fa-cubes"></i> Third-Party Dependencies
+                    </button>
+                    <button class="tab-btn" data-tab="tab-refactor">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Optimized Code
+                    </button>
+                    <button class="tab-btn" data-tab="tab-comparison">
+                        <i class="fa-solid fa-code-compare"></i> Comparison
+                    </button>
+                    <button class="tab-btn" data-tab="tab-report">
+                        <i class="fa-solid fa-file-lines"></i> Report
+                    </button>
+                    <button class="tab-btn" data-tab="tab-history">
+                        <i class="fa-solid fa-clock-rotate-left"></i> History
                     </button>
                 </nav>
 
                 <div class="tab-content">
+                    <!-- Project Landing Page -->
+                    <div class="tab-pane active" id="tab-home">
+                        <section class="landing-page">
+                            <div class="landing-hero">
+                                <span class="landing-eyebrow"><i class="fa-solid fa-microchip"></i> AI-POWERED CODE ANALYSIS</span>
+                                <h1>Understand your code.<br><span>Improve what matters.</span></h1>
+                                <p class="landing-intro">
+                                    Intelli Code Analyser helps you uncover technical debt, explore project structure,
+                                    and make informed improvements across Java, Python, web, Django, and Node.js projects.
+                                </p>
+                                <button class="btn btn-primary landing-cta" id="btn-open-upload" type="button">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i> Analyze a Project
+                                </button>
+                                <p class="landing-note">Upload a ZIP archive to get started. Your existing workflow stays in your control.</p>
+                            </div>
+
+                            <div class="landing-features" aria-label="Analyzer capabilities">
+                                <article class="landing-feature">
+                                    <span class="landing-feature-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+                                    <h2>Find technical debt</h2>
+                                    <p>Review code smells and prioritized findings with clear severity and recommendations.</p>
+                                </article>
+                                <article class="landing-feature">
+                                    <span class="landing-feature-icon"><i class="fa-solid fa-diagram-project"></i></span>
+                                    <h2>Explore architecture</h2>
+                                    <p>Visualize dependencies and relationships to better understand how your code connects.</p>
+                                </article>
+                                <article class="landing-feature">
+                                    <span class="landing-feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                                    <h2>Improve with confidence</h2>
+                                    <p>Generate suggested optimizations, compare results, and review project reports.</p>
+                                </article>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Upload Project Tab -->
+                    <div class="tab-pane" id="tab-upload">
+                        <section class="control-panel">
+                            <div class="glass-card upload-card">
+                                <h2><i class="fa-solid fa-file-zip"></i> Upload Project</h2>
+                                <p class="subtitle">Upload a ZIP archive of your project and analyze it instantly.</p>
+
+                                <div class="stack-picker-panel">
+                                    <label class="stack-label" for="stack-select">
+                                        <i class="fa-solid fa-code-branch"></i>
+                                        Stack
+                                    </label>
+                                    <div class="stack-select-wrap">
+                                        <select id="stack-select" class="stack-select">
+                                            <option value="java">Java</option>
+                                            <option value="python">Python</option>
+                                            <option value="web">Web (HTML/CSS/JavaScript)</option>
+                                            <option value="django">Django (Python + HTML/CSS/JS)</option>
+                                            <option value="nodejs">Node.js (JavaScript + HTML/CSS)</option>
+                                        </select>
+                                    </div>
+                                    <p class="stack-description" id="stack-description">Java projects and Java-specific debt rules.</p>
+                                </div>
+
+                                <div class="drag-drop-zone" id="drop-zone">
+                                    <input type="file" id="file-input" accept=".zip" class="file-input">
+                                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                                    <p class="drag-text">Drag &amp; drop your ZIP here, or <span class="browse-link">browse</span></p>
+                                    <p class="file-info" id="file-info"></p>
+                                </div>
+
+                                <div class="card-actions">
+                                    <button class="btn btn-primary" id="btn-upload" disabled>
+                                        <i class="fa-solid fa-rocket"></i> Run Uploaded Scan
+                                    </button>
+                                    <button class="btn btn-glow" id="btn-sample-scan" type="button">
+                                        <i class="fa-solid fa-wand-magic-sparkles"></i> Run Sample Project
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
                     <!-- Code Smells Tab -->
-                    <div class="tab-pane active" id="tab-smells">
+                    <div class="tab-pane" id="tab-smells">
+                        <section class="glass-card web-metrics-panel hidden" id="web-metrics-panel" aria-live="polite">
+                            <div class="pane-header">
+                                <div>
+                                    <h2>Web Stack Metrics</h2>
+                                    <p class="tab-subtitle">HTML structure, CSS cascade, JavaScript safety, and DOM coupling.</p>
+                                </div>
+                            </div>
+                            <div class="web-metrics-grid" id="web-metrics-grid"></div>
+                        </section>
+                        <section class="glass-card web-metrics-panel hidden" id="django-metrics-panel" aria-live="polite">
+                            <div class="pane-header">
+                                <div>
+                                    <h2>Django Project Metrics</h2>
+                                    <p class="tab-subtitle">ORM/query risk, view and template complexity, and app structure.</p>
+                                </div>
+                            </div>
+                            <div class="web-metrics-grid" id="django-metrics-grid"></div>
+                        </section>
+                        <section class="glass-card web-metrics-panel hidden" id="node-metrics-panel" aria-live="polite">
+                            <div class="pane-header">
+                                <div>
+                                    <h2>Node.js Project Metrics</h2>
+                                    <p class="tab-subtitle">Package health, async behavior, routes, and server-side security signals.</p>
+                                </div>
+                            </div>
+                            <div class="web-metrics-grid" id="node-metrics-grid"></div>
+                        </section>
                         <div class="pane-header">
                             <h2>Detected Design & Code Smells</h2>
                             <div class="smells-legend">
@@ -166,21 +342,9 @@
                         </div>
                         
                         <div class="smells-table-wrapper">
-                            <table class="dashboard-table">
-                                <thead>
-                                    <tr>
-                                        <th>Rule / Smell</th>
-                                        <th>Class Location</th>
-                                        <th>Line</th>
-                                        <th>Score Contribution</th>
-                                        <th>Severity</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="smells-tbody">
-                                    <!-- Dynamic content -->
-                                </tbody>
-                            </table>
+                            <div id="smells-tbody" class="smells-phase-list">
+                                <!-- Dynamic grouped issues -->
+                            </div>
                         </div>
                     </div>
 
@@ -232,6 +396,43 @@
                         </div>
                     </div>
 
+                    <!-- Knowledge Graph Tab -->
+                    <div class="tab-pane" id="tab-knowledge">
+                        <div class="pane-header-graph">
+                            <div>
+                                <h2>Project Knowledge Graph</h2>
+                                <p class="tab-subtitle">Full structure and connectivity: project, packages, classes, methods, and dependency links.</p>
+                            </div>
+                            <div class="graph-legend knowledge-legend">
+                                <span class="legend-item color-project">Project</span>
+                                <span class="legend-item color-package">Package</span>
+                                <span class="legend-item color-class">Class</span>
+                                <span class="legend-item color-method">Method</span>
+                                <span class="legend-item color-dep">Depends on</span>
+                            </div>
+                        </div>
+                        <div class="graph-layout">
+                            <div class="network-container" id="knowledge-graph">
+                            </div>
+                            <div class="node-details-sidebar glass-card" id="knowledge-details-sidebar" data-node-type="class">
+                                <h3><i class="fa-solid fa-circle-nodes"></i> Node Details</h3>
+                                <p class="no-node-selected" id="no-kg-node-selected-msg">Click a node to inspect structure and connections.</p>
+                                <div class="node-metrics-info hidden" id="kg-node-metrics-info">
+                                    <h4 id="kg-node-name">demo.UserService</h4>
+                                    <div class="metric-row">
+                                        <span>Kind:</span>
+                                        <strong id="kg-node-kind">class</strong>
+                                    </div>
+                                    <div class="metric-row">
+                                        <span>Connections:</span>
+                                        <strong id="kg-node-degree" class="text-glow">0</strong>
+                                    </div>
+                                    <p class="instability-explanation" id="kg-node-desc"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Third-Party Dependencies Tab -->
                     <div class="tab-pane" id="tab-dependencies">
                         <div class="pane-header">
@@ -266,6 +467,84 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Generate Optimized Code Tab -->
+                    <div class="tab-pane" id="tab-refactor">
+                        <div class="pane-header">
+                            <div>
+                                <h2>Generate Optimized Code</h2>
+                                <p class="tab-subtitle">Select findings to generate a behavior-preserving optimized project.</p>
+                            </div>
+                            <span class="badge badge-glow">Stack: <span id="refactor-stack-label">Not scanned</span></span>
+                        </div>
+                        <div class="refactor-selection-actions">
+                            <button class="btn btn-secondary" id="btn-refactor-select-all" type="button">Select All</button>
+                            <button class="btn btn-secondary" id="btn-refactor-clear-selection" type="button">Clear Selection</button>
+                            <span class="badge badge-glow" id="refactor-selected-count">Selected: 0</span>
+                        </div>
+                        <div id="refactor-issue-list" class="refactor-issue-list">
+                            <p class="empty-state">Run a scan to select issues for optimization.</p>
+                        </div>
+                        <div class="refactor-generate-actions">
+                            <button class="btn btn-primary" id="btn-generate-optimized" type="button" disabled>
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Optimized Code
+                            </button>
+                            <span id="refactor-status" class="refactor-status" role="status" aria-live="polite"></span>
+                        </div>
+                        <div id="refactor-result" class="refactor-result hidden"></div>
+                    </div>
+
+                    <!-- Comparison Tab -->
+                    <div class="tab-pane" id="tab-comparison">
+                        <div class="pane-header">
+                            <div>
+                                <h2>Optimization Comparison</h2>
+                                <p class="tab-subtitle">Review debt changes and optionally compare original and optimized source files side by side.</p>
+                            </div>
+                        </div>
+                        <div id="comparison-content" class="comparison-content">
+                            <p class="empty-state">Generate optimized code first to view comparison.</p>
+                        </div>
+                    </div>
+
+                    <!-- Report Tab -->
+                    <div class="tab-pane" id="tab-report">
+                        <div class="pane-header">
+                            <div>
+                                <h2>Technical Debt Report</h2>
+                                <p class="tab-subtitle">Standard project analysis review with comparison and export support.</p>
+                            </div>
+                            <div class="report-actions">
+                                <span class="badge badge-glow" id="report-status">Current scan</span>
+                                <button class="btn btn-secondary" id="btn-download-report" type="button">
+                                    <i class="fa-solid fa-file-pdf"></i> Download PDF
+                                </button>
+                                <span id="report-download-status" role="status" aria-live="polite"></span>
+                                <button class="btn btn-secondary" id="btn-print-report" type="button" title="Print directly or save as PDF">
+                                    <i class="fa-solid fa-print"></i> Print Report
+                                </button>
+                            </div>
+                        </div>
+                        <div id="report-content" class="report-content">
+                            <p class="empty-state">Run a scan to generate a report.</p>
+                        </div>
+                    </div>
+
+                    <!-- History Tab -->
+                    <div class="tab-pane" id="tab-history">
+                        <div class="pane-header">
+                            <div>
+                                <h2>Saved Scan History</h2>
+                                <p class="tab-subtitle">Review previous scans and stored remediation suggestions.</p>
+                            </div>
+                            <button class="btn btn-secondary history-refresh" id="btn-history-refresh" type="button">
+                                <i class="fa-solid fa-rotate"></i> Refresh
+                            </button>
+                        </div>
+                        <div id="tab-history-content" class="history-tab-content">
+                            <p class="empty-state">Sign in to view saved history.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -297,11 +576,54 @@
         </div>
     </div>
 
-    <!-- Custom Lucide Icon Renderer helper -->
-    <script>
-        // Smooth scroll & layout initialization helper
-    </script>
-    <!-- Custom logic -->
-    <script src="/static/app.js"></script>
+    <!-- Login Overlay -->
+    <div class="auth-overlay hidden" id="auth-overlay">
+        <div class="glass-card auth-card">
+            <button class="auth-close" id="auth-close-btn" type="button" aria-label="Close sign in dialog">&times;</button>
+            <h2><i class="fa-solid fa-lock"></i> Sign in</h2>
+            <p class="subtitle">Email and password are stored in MongoDB. Scans and remediation suggestions are saved to your history.</p>
+            <div class="input-group">
+                <i class="fa-solid fa-envelope path-icon"></i>
+                <input type="email" id="auth-email" class="text-input" placeholder="you@example.com">
+            </div>
+            <div class="input-group" style="margin-top: 0.75rem;">
+                <i class="fa-solid fa-key path-icon"></i>
+                <input type="password" id="auth-password" class="text-input" placeholder="Password (min 6 characters)">
+            </div>
+            <p class="auth-error hidden" id="auth-error"></p>
+            <div class="auth-actions">
+                <button class="btn btn-primary" id="btn-login" type="button">
+                    <i class="fa-solid fa-right-to-bracket"></i> Log in
+                </button>
+                <button class="btn btn-secondary" id="btn-register" type="button">
+                    <i class="fa-solid fa-user-plus"></i> Create account
+                </button>
+            </div>
+            <p class="auth-hint">Start MongoDB on <code>mongodb://127.0.0.1:27017</code> (or set <code>MONGODB_URI</code>).</p>
+        </div>
+    </div>
+
+    <!-- History Drawer -->
+    <div class="modal hidden" id="history-modal">
+        <div class="modal-overlay" id="history-overlay"></div>
+        <div class="modal-content glass-card history-modal-content">
+            <div class="modal-header">
+                <h2>Login & Scan History</h2>
+                <button class="modal-close" id="history-close-btn">&times;</button>
+            </div>
+            <div class="modal-body history-body">
+                <div>
+                    <h3>Recent logins</h3>
+                    <ul class="history-list" id="login-history-list"></ul>
+                </div>
+                <div>
+                    <h3>Saved scans &amp; suggestions</h3>
+                    <div id="scan-history-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js?v=comparison-report-v3"></script>
 </body>
 </html>

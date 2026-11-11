@@ -1,0 +1,25 @@
+from debt_analyzer.rules.java.java_rules import *
+
+__all__ = [
+    "LongMethodRule",
+    "ExcessiveParameterListRule",
+    "GodClassRule",
+    "LargeClassRule",
+    "HighCouplingRule",
+    "DeepInheritanceRule",
+    "DuplicateCodeRule",
+    "UnusedVariableRule",
+    "DeadMethodRule",
+    "HighCyclomaticComplexityRule",
+    "DeepNestingRule",
+    "EmptyCatchBlockRule",
+    "MagicNumberRule",
+    "HardcodedCredentialsRule",
+    "FeatureEnvyRule",
+    "CircularDependencyRule",
+    "StringConcatenationInLoopRule",
+    "UnclosedResourceRule",
+    "MutableStaticFieldRule",
+    "GenericExceptionHandlingRule",
+    "MissingJavadocRule",
+]

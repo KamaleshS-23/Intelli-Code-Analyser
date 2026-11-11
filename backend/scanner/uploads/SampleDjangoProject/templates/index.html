@@ -1,0 +1,73 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Community Library</title>
+  <link rel="stylesheet" href="{% static 'css/library.css' %}">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="#main" class="brand">Community Library</a>
+    <nav aria-label="Main navigation">
+      <a href="#catalog">Catalog</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="welcome" aria-labelledby="welcome-title">
+      <p class="eyebrow">Your neighborhood collection</p>
+      <h1 id="welcome-title">Find your next good read.</h1>
+      <p>Browse featured books and save a title to your reading list.</p>
+    </section>
+    <section id="catalog" class="catalog" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Curated for you</p>
+          <h2 id="catalog-title">Featured books</h2>
+        </div>
+        <span id="saved-count" aria-live="polite">0 saved</span>
+      </div>
+      <ul class="book-list">
+        <li class="book-card">
+          <img src="/static/images/field-notes-cover.jpg" alt="Cover of Field Notes">
+          <div>
+            <h3>Field Notes</h3>
+            <p>Stories about finding wonder in ordinary places.</p>
+            <button class="save-book" type="button" data-book="Field Notes">Save book</button>
+          </div>
+        </li>
+        <li class="book-card">
+          <img src="/static/images/quiet-gardens-cover.jpg" alt="Cover of Quiet Gardens">
+          <div>
+            <h3>Quiet Gardens</h3>
+            <p>A practical guide to growing a small, resilient garden.</p>
+            <button class="save-book" type="button" data-book="Quiet Gardens">Save book</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="help" class="help-panel" aria-labelledby="help-title">
+      <h2 id="help-title">A library for everyone</h2>
+      <p>Ask the desk team about accessible formats and borrowing options.</p>
+    </section>
+    <section class="legacy-example" aria-labelledby="legacy-title">
+      <h2 id="legacy-title">Legacy markup examples</h2>
+      <img src="/static/images/legacy-cover.jpg">
+      <p class="template-class-without-css">This template class is intentionally undefined.</p>
+      <h3 style="color: #ab3421" onclick="showLegacyNotice()">Old inline styles and event handlers</h3>
+      <font color="red">Deprecated markup example</font>
+      <div class="legacy-box"><div><div><div><div><div><div><div><div><div><div>
+        <div><div><div><div><div><div><div><div><div><div>
+          <div><div><div><div><div><div><div><div><div><div><div>Legacy layout</div></div></div></div></div></div></div></div></div></div></div>
+        </div></div></div></div></div></div></div></div></div></div>
+      </div></div></div></div></div></div></div></div></div></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>Community Library · Django sample project</p>
+  </footer>
+</body>
+</html>
